@@ -19,7 +19,7 @@
 - [x] Phoenix
 - [ ] Emulation
 - [ ] zombiesCma
-- [ ] rfazio (maybe)
+- [ ] rfazio *(maybe)*
 
 ----
 
