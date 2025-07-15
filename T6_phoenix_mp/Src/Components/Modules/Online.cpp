@@ -5,22 +5,24 @@
 
 namespace Online
 {
+#define BD_CONNECTED 2
 	Utils::Hook::Detour Live_IsUserSignedInToDemonware_Hook;
 	BOOL Live_IsUserSignedInToDemonware(int controllerIndex)
 	{
-		return 2;
+		return BD_CONNECTED;
 	}
 
 	Utils::Hook::Detour Live_IsUserSignedInToLive_Hook;
 	BOOL Live_IsUserSignedInToLive(int controllerIndex)
 	{
-		return 2;
+		return BD_CONNECTED;
 	}
 
+#define CONNECTED_STATE 5
 	Utils::Hook::Detour Live_Base_IsConnected_Hook;
 	BOOL Live_Base_IsConnected(int controllerIndex)
 	{
-		return 5;
+		return CONNECTED_STATE;
 	}
 
 	Utils::Hook::Detour LiveStorage_DoWeHaveFFOTD_Hook;
