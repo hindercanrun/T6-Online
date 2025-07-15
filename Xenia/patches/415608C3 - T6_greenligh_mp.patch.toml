@@ -1,0 +1,62 @@
+title_name = "New Moon"
+title_id = "415608C3"
+hash = "0896FA8A58329FC9" # CoDMP.exe
+
+[[patch]]
+	name = "xenia fixes"
+	author = "hindercanrun"
+	is_enabled = true
+
+	# exe booting
+	[[patch.be32]]
+		address = 0x825D737C
+		value = 0x60000000
+
+[[patch]]
+	name = "kys"
+	author = "hindercanrun"
+	is_enabled = true
+
+	# dvar set
+	[[patch.be32]]
+		address = 0x825A1024
+		value = 0x60000000
+
+	# dvar dump
+	[[patch.be32]]
+		address = 0x82318F64
+		value = 0x60000000
+
+	# nested task assert
+	[[patch.be32]]
+		address = 0x82754EFC
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x82596E48
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x825977F8
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x8272E838
+		value = 0x60000000
+
+	# make friends list openable
+	[[patch.be32]]
+		address = 0x82728940
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x82736AAC
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x82736648
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x8273679C
+		value = 0x60000000
