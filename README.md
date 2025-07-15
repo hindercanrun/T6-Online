@@ -19,7 +19,6 @@
 - [x] Phoenix
 - [ ] Emulation
 - [ ] rfazio
-- [ ] retail
 
 ----
 
