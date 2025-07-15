@@ -99,6 +99,6 @@ namespace Online
 		LiveElite_CheckProgress_Hook.Create(0x824E78B0, LiveElite_CheckProgress);
 		LiveCAC_CheckProgress_Hook.Create(0x82352138, LiveCAC_CheckProgress);
 
-		Utils::Hook::SetValue<uint8_t>(0x8424C6F0, 1);// byte_8424C6F0
+		Utils::Hook::SetValue<uint8_t>(0x8424C6F0, 1); // byte_8424C6F0
 	}
 }
