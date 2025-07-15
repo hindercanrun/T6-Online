@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A1652141-4F88-4C59-BC68-4F865A36C0CA}</ProjectGuid>
+    <ProjectGuid>{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}</ProjectGuid>
     <Keyword>Xbox360Proj</Keyword>
-    <ProjectName>T6_phoenix_mp</ProjectName>
+    <ProjectName>alpha</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'" Label="Configuration">
@@ -42,7 +42,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)bin\Xenon_Release\</OutDir>
     <IntDir>$(ProjectDir)obj\Xenon_Release\</IntDir>
-    <OutputFile>$(ProjectDir)bin\Xenon_Release\T6_phoenix_mp.exe</OutputFile>
+    <OutputFile>$(ProjectDir)bin\Xenon_Release\alpha.exe</OutputFile>
     <ImageXexOutput>$(ProjectDir)bin\Xenon_Release\$(ProjectName).xex</ImageXexOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
@@ -50,7 +50,7 @@
     <OutDir>$(ProjectDir)bin\Xenon_Debug\</OutDir>
     <IntDir>$(ProjectDir)obj\Xenon_Debug\</IntDir>
     <ImageXexOutput>$(ProjectDir)bin\Xenon_Debug\$(ProjectName).xex</ImageXexOutput>
-    <OutputFile>$(ProjectDir)bin\Xenon_Debug\T6_phoenix_mp.exe</OutputFile>
+    <OutputFile>$(ProjectDir)bin\Xenon_Debug\alpha.exe</OutputFile>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
     <ClCompile>
@@ -113,12 +113,14 @@
   <ItemGroup>
     <ClCompile Include="..\Src\Components\Loader.cpp" />
     <ClCompile Include="..\Src\Components\Modules\Online.cpp" />
+    <ClCompile Include="..\Src\Game\Symbols.cpp" />
     <ClCompile Include="..\Src\Main.cpp" />
     <ClCompile Include="..\Src\Utils\Hook.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Src\Components\Loader.hpp" />
     <ClInclude Include="..\Src\Components\Modules\Online.hpp" />
+    <ClInclude Include="..\Src\Game\Symbols.hpp" />
     <ClInclude Include="..\Src\Std_Include.hpp" />
     <ClInclude Include="..\Src\Utils\Hook.hpp" />
   </ItemGroup>

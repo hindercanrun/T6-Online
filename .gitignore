@@ -4,12 +4,12 @@ T6_greenlight_mp/Build/bin/
 T6_greenlight_mp/Build/obj/
 
 # Alpha build results
-T6_alpha_mp/Build/bin/
-T6_alpha_mp/Build/obj/
+alpha/Build/bin/
+alpha/Build/obj/
 
 # Phoenix build results
-T6_phoenix_mp/Build/bin/
-T6_phoenix_mp/Build/obj/
+phoenix/Build/bin/
+phoenix/Build/obj/
 
 *.user
 *.sdf
