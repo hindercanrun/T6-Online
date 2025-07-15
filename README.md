@@ -17,7 +17,7 @@
 - [ ] T6_jan_mp
 - [x] T6_alpha_mp
 - [ ] T6_july_press_mp
-- [ ] T6_beta_mp
+- [x] Phoenix
 - [ ] T6_emulation
 - [ ] T6_rfazio
 
