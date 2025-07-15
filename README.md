@@ -10,6 +10,8 @@
 3. **Build** the solution.
 4. Done.
 
+----
+
 ### Supported Builds:
 - [ ] T6_greenlight_mp
 - [ ] T6_jan_mp
@@ -18,6 +20,8 @@
 - [ ] T6_beta_mp
 - [ ] T6_emulation
 - [ ] T6_rfazio
+
+----
 
 > [!IMPORTANT]
 > **This plugin has been created purely for the purposes of research.**
