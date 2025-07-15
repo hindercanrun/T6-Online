@@ -13,7 +13,7 @@
 ----
 
 ### Supported Builds:
-- [ ] T6_greenlight_mp
+- [x] T6_greenlight_mp
 - [ ] T6_jan_mp
 - [x] T6_alpha_mp
 - [ ] T6_july_press_mp
