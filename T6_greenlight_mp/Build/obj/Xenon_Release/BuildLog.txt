@@ -1,0 +1,34 @@
+﻿Build started 15/07/2025 1:55:57 PM.
+     1>Project "D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\T6_greenlight_mp.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\bin\Xenon_Release\".
+       InitializeBuildStatus:
+         Creating "D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\T6_greenlight_mp.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\CL.exe /c /Zi /nologo /W3 /WX- /MP /Ox /Os /GL /D NDEBUG /D _XBOX /D RELEASE /GF /Gm- /MT /GS- /Gy /fp:fast /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp- /Fo"D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\\" /Fd"D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\vc100.pdb" /TP ..\Src\Components\Loader.cpp ..\Src\Components\Modules\Online.cpp ..\Src\Game\Symbols.cpp ..\Src\Main.cpp ..\Src\Utils\Hook.cpp /FI"D:\Program Files (x86)\Microsoft Xbox 360 SDK\\include\xbox\xbox_intellisense_platform.h"
+         Loader.cpp
+         Online.cpp
+         Symbols.cpp
+         Main.cpp
+         Hook.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\link.exe /ERRORREPORT:PROMPT /OUT:"D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\bin\Xenon_Release\T6_greenlight_mp.exe" /INCREMENTAL:NO /NOLOGO xapilib.lib d3d9ltcg.lib d3dx9.lib xgraphics.lib xboxkrnl.lib xnet.lib xaudio2.lib xact3ltcg.lib x3daudioltcg.lib xmcoreltcg.lib vcomp.lib /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\bin\Xenon_Release\T6_greenlight_mp.pdb" /STACK:"262144","262144" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /RELEASE /IMPLIB:"D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\bin\Xenon_Release\T6_greenlight_mp.lib" D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\Loader.obj
+         D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\Online.obj
+         D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\Symbols.obj
+         D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\Main.obj
+         D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\Hook.obj /dll /ALIGN:128,4096 /XEX:NO
+         Generating code
+         Finished generating code
+       ImageXex:
+         D:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\imagexex.exe /out:"D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\bin\Xenon_Release\T6_greenlight_mp.xex" /config:"XEX.xml" "D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\bin\Xenon_Release\T6_greenlight_mp.exe" 
+         Microsoft(R) Xbox 360 Image File Builder Version 2.0.21256.0
+         (c)2012 Microsoft Corporation. All rights reserved.
+         
+       FinalizeBuildStatus:
+         Deleting file "D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\T6_greenlight_mp.unsuccessfulbuild".
+         Touching "D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\obj\Xenon_Release\T6_greenlight_mp.lastbuildstate".
+     1>Done Building Project "D:\t6_alpha_mp\plugins\T6\T6_greenlight_mp\Build\T6_greenlight_mp.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.35

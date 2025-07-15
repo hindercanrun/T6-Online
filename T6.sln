@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T6_alpha_mp", "T6_alpha_mp\Build\T6_alpha_mp.vcxproj", "{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T6_greenlight_mp", "T6_greenlight_mp\Build\T6_greenlight_mp.vcxproj", "{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Xbox 360 = Debug|Xbox 360
@@ -13,6 +15,12 @@ Global
 		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
 		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
 		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
