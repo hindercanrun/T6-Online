@@ -2,3 +2,7 @@
 # Greenlight build results
 T6_greenlight_mp/Build/bin/
 T6_greenlight_mp/Build/obj/
+
+# Greenlight build results
+T6_alpha_mp/Build/bin/
+T6_alpha_mp/Build/obj/
