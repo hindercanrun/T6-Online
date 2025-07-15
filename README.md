@@ -14,12 +14,11 @@
 
 ### Supported Builds:
 - [x] T6_greenlight_mp
-- [ ] T6_jan_mp
-- [x] T6_alpha_mp
-- [ ] T6_july_press_mp
-- [ ] T6_beta_mp
-- [ ] T6_emulation
-- [ ] T6_rfazio
+- [x] alpha
+- [ ] july_press_final
+- [x] Phoenix
+- [ ] Emulation
+- [ ] rfazio
 
 ----
 
