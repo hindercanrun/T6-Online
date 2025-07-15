@@ -14,7 +14,7 @@
 
 ### Supported Builds:
 - [x] T6_greenlight_mp
-- [ ] T6_jan_mp
+- [ ] jan_mp
 - [x] alpha
 - [ ] july_press_final
 - [x] Phoenix
