@@ -22,8 +22,6 @@
 #include <xtl.h>
 #include <xboxmath.h>
 
-#include "Game\Symbols.hpp"
-
 // xbox kernel stuff
 extern "C"
 {

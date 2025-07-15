@@ -7,9 +7,6 @@
     <Filter Include="Mod\Utils">
       <UniqueIdentifier>{37574947-7619-48b4-a2d9-0f450e2f61e8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Mod\Game">
-      <UniqueIdentifier>{5c4749ce-ede5-4789-932a-ad5c23387666}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Mod\Components">
       <UniqueIdentifier>{8eb38a39-89f2-49ce-9ffb-2ef2695420dc}</UniqueIdentifier>
     </Filter>
@@ -24,9 +21,6 @@
     <ClCompile Include="..\Src\Utils\Hook.cpp">
       <Filter>Mod\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="..\Src\Game\Symbols.cpp">
-      <Filter>Mod\Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\Src\Components\Loader.cpp">
       <Filter>Mod\Components</Filter>
     </ClCompile>
@@ -40,9 +34,6 @@
     </ClInclude>
     <ClInclude Include="..\Src\Utils\Hook.hpp">
       <Filter>Mod\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Src\Game\Symbols.hpp">
-      <Filter>Mod\Game</Filter>
     </ClInclude>
     <ClInclude Include="..\Src\Components\Loader.hpp">
       <Filter>Mod\Components</Filter>
