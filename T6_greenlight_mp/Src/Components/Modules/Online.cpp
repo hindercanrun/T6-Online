@@ -503,10 +503,16 @@ DWORD XSessionGetDetails(
 		return true;
 	}
 
-	Utils::Hook::Detour LiveStorage_DoWeHaveLeagues_hook;
-	bool LiveStorage_DoWeHaveLeagues()
+	Utils::Hook::Detour LiveStorage_ValidateFFOTD_hook;
+	bool LiveStorage_ValidateFFOTD()
 	{
-		return true;
+		return TRUE;
+	}
+
+	Utils::Hook::Detour LiveStorage_DoWeHavePlaylists_hook;
+	bool LiveStorage_DoWeHavePlaylists()
+	{
+		return TRUE;
 	}
 
 	Utils::Hook::Detour LiveStorage_DoWeHaveAllStats_hook;
@@ -525,24 +531,6 @@ DWORD XSessionGetDetails(
 	bool LiveStorage_DoWeHaveContracts()
 	{
 		return true;
-	}
-
-	Utils::Hook::Detour LiveLeaderboard_GetRankInLeaderBoardState_hook;
-	int LiveLeaderboard_GetRankInLeaderBoardState(int controllerIndex)
-	{
-		return 2;
-	}
-
-	Utils::Hook::Detour LiveElite_CheckProgress_hook;
-	BOOL LiveElite_CheckProgress(int localControllerIndex, bool status)
-	{
-		return 1;
-	}
-
-	Utils::Hook::Detour LiveCAC_CheckProgress_hook;
-	BOOL LiveCAC_CheckProgress(int localControllerIndex, bool status)
-	{
-		return 1;
 	}
 
 #define MAX_PLAYERS 19
@@ -568,73 +556,21 @@ DWORD XSessionGetDetails(
 		return fakeXuids[clientNum];
 	}
 
-	/**
-	 **********************
-	 * Profile/Rank Stubs *
-	 **********************
-	**/
-
-	Utils::Hook::Detour PCache_GetProfileEmblem_hook;
-	void PCache_GetProfileEmblem(
-		struct PCachePublicProfile *profile,
-		struct CompositeEmblemLayer *layers,
-		int layerCount,
-		__int16 *backgroundOut)
+	Utils::Hook::Detour SanityCheckSession_hook;
+	void __fastcall SanityCheckSession(const char **a1)
 	{
-		if (!profile || !layers || !backgroundOut || layerCount <= 0)
-			return;
-
-		for (int i = 0; i < layerCount; ++i)
-		{
-			CompositeEmblemLayer &layer = layers[i];
-			layer.iconIndex = 0;
-			layer.colorIndex = 0;
-			layer.posX = 0.0f;
-			layer.posY = 0.0f;
-			layer.scaleX = 1.0f;
-			layer.scaleY = 1.0f;
-			layer.angle = 0.0f;
-			layer.outline = false;
-			layer.flip = false;
-		}
-
-		// dummy background
-	}
-
-	Utils::Hook::Detour CL_GetZombieRank_hook;
-	int CL_GetZombieRank(int timePlayed, int weightedDowns, int weightedRounds)
-	{
-		// Stub: Calculate simple fake skill and rank
-
-		float skill = 0.0f;
-		if (weightedDowns > 0)
-		{
-			skill = weightedRounds / (weightedDowns * 0.001f);
-		}
-
-		int tier = timePlayed / 300000; // 5 minutes per tier
-		int rank = (int)(skill / 100.0f); // 100 skill per rank step
-
-		if (tier > 10)
-		{
-			tier = 10;
-		}
-
-		if (rank > 15)
-		{
-			rank = 15;
-		}
-		return tier + rank; // Fake combination
+		return;
 	}
 
 	void Load()
 	{
 		// Xbox
-		//XEnumerate_hook.Create(0x8298B798, XEnumerate);
-		//XGetOverlappedResult_hook.Create(0x8298B6F8, XGetOverlappedResult);
+		XEnumerate_hook.Create(0x829185D0, XEnumerate);
+		XGetOverlappedResult_hook.Create(0x82917C68, XGetOverlappedResult);
 		//XGetOverlappedExtendedError_hook.Create(0x82990F20, XGetOverlappedExtendedError);
-		//XNetServerToInAddr_hook.Create(0x8299FFF0, XNetServerToInAddr);
+		XNetServerToInAddr_hook.Create(0x8292EC50, XNetServerToInAddr);
 		//XSessionGetDetails_hook.Create(0x829A2948, XSessionGetDetails);
+		SanityCheckSession_hook.Create(0x8273E7E8, SanityCheckSession);
 		//XSessionEnd_hook.Create(0x829A2110, XSessionEnd);
 		//XSessionDelete_hook.Create(0x829A1E68, XSessionDelete);
 		//XPartyGetUserList_hook.Create(0x82988D48, XPartyGetUserList);
@@ -642,31 +578,24 @@ DWORD XSessionGetDetails(
 		// DemonWare
 		//bdLogMessage_hook.Create(0x82A59CB0, bdLogMessage);
 		//bdPlatformStreamSocket__isWritable_hook.Create(0x82B52E58, bdPlatformStreamSocket__isWritable);
-		//bdLobbyService__getStatus_hook.Create(0x82A396B0, bdLobbyService__getStatus);
+		bdLobbyService__getStatus_hook.Create(0x82A892B8, bdLobbyService__getStatus);
 		//bdPlatformStreamSocket__send_hook.Create(0x82B52F68, bdPlatformStreamSocket__send);
 		//bdLobbyConnection__recvMessageData_hook.Create(0x82A56D68, bdLobbyConnection__recvMessageData);
 		//bdStats__readStatsByPivot_hook.Create(0x82A3F978, bdStats__readStatsByPivot);
 
 		// LIVE
-		//Live_IsUserSignedInToDemonware_hook.Create(0x82763C10, Live_IsUserSignedInToDemonware);
-		//Live_IsUserSignedInToLive_hook.Create(0x82767FA0, Live_IsUserSignedInToLive);
-		//Live_Base_IsConnected_hook.Create(0x827B5500, Live_Base_IsConnected);
-		//LiveStorage_DoWeHaveCurrentStats_hook.Create(0x827A09A0, LiveStorage_DoWeHaveCurrentStats);
-		//LiveStorage_DoWeHaveStats_hook.Create(0x827A0970, LiveStorage_DoWeHaveStats);
+		Live_IsUserSignedInToDemonware_hook.Create(0x827097F0, Live_IsUserSignedInToDemonware);
+		Live_IsUserSignedInToLive_hook.Create(0x82710A60, Live_IsUserSignedInToLive);
+		Live_Base_IsConnected_hook.Create(0x82769478, Live_Base_IsConnected);
+		LiveStorage_DoWeHaveCurrentStats_hook.Create(0x82754A48, LiveStorage_DoWeHaveCurrentStats);
+		LiveStorage_DoWeHaveStats_hook.Create(0x827549E8, LiveStorage_DoWeHaveStats);
 		// TODO: Maybe these could be removed later?
-		//LiveStorage_DoWeHaveLeagues_hook.Create(0x827AB938, LiveStorage_DoWeHaveLeagues);
-		//LiveStorage_DoWeHaveAllStats_hook.Create(0x827A0A10, LiveStorage_DoWeHaveAllStats);
-		//LiveStorage_IsTimeSynced_hook.Create(0x827A2810, LiveStorage_IsTimeSynced);
-		//LiveStorage_DoWeHaveContracts_hook.Create(0x827AB918, LiveStorage_DoWeHaveContracts);
-		//LiveLeaderboard_GetRankInLeaderBoardState_hook.Create(0x824E5710, LiveLeaderboard_GetRankInLeaderBoardState);
-		//LiveElite_CheckProgress_hook.Create(0x8276FD78, LiveElite_CheckProgress);
-		//LiveCAC_CheckProgress_hook.Create(0x824E1888, LiveCAC_CheckProgress);
+		LiveStorage_ValidateFFOTD_hook.Create(0x82760170, LiveStorage_ValidateFFOTD);
+		LiveStorage_DoWeHavePlaylists_hook.Create(0x8275F398, LiveStorage_DoWeHavePlaylists);
+		LiveStorage_DoWeHaveAllStats_hook.Create(0x82754AB0, LiveStorage_DoWeHaveAllStats);
+		LiveStorage_IsTimeSynced_hook.Create(0x827563D0, LiveStorage_IsTimeSynced);
+		LiveStorage_DoWeHaveContracts_hook.Create(0x8275F3C8, LiveStorage_DoWeHaveContracts);
 		// End
 		//Session_GetXuid_hook.Create(0x82785EA0, Session_GetXuid);
-
-		//PCache_GetProfileEmblem_hook.Create(0x82781890, PCache_GetProfileEmblem);
-		//CL_GetZombieRank_hook.Create(0x8234DD60, CL_GetZombieRank); // Just for the Zombies menu
-
-		//Utils::Hook::SetValue(0x82764778, 1); // byte_849016D4
 	}
 }
