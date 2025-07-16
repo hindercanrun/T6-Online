@@ -15,6 +15,10 @@ Builds/Phoenix/Build/obj/
 Builds/Emulation/Build/bin/
 Builds/Emulation/Build/obj/
 
+# RFAZIO build results
+Builds/RFAZIO/Build/bin/
+Builds/RFAZIO/Build/obj/
+
 *.user
 *.sdf
 *.suo
