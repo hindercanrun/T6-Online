@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "alpha", "alpha\Build\alpha.vcxproj", "{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alpha", "Alpha\Build\Alpha.vcxproj", "{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "T6_greenlight_mp", "T6_greenlight_mp\Build\T6_greenlight_mp.vcxproj", "{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Greenlight", "Greenlight\Build\Greenlight.vcxproj", "{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "phoenix", "phoenix\Build\phoenix.vcxproj", "{A1652141-4F88-4C59-BC68-4F865A36C0CA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Phoenix", "Phoenix\Build\Phoenix.vcxproj", "{A1652141-4F88-4C59-BC68-4F865A36C0CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Builds", "Builds", "{6993937E-4408-497C-B936-A0EEB396C87F}"
 EndProject

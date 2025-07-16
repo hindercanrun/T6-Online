@@ -1,19 +1,19 @@
 
 # Greenlight build results
-T6_greenlight_mp/Build/bin/
-T6_greenlight_mp/Build/obj/
+Builds/Greenlight/Build/bin/
+Builds/Greenlight/Build/obj/
 
 # Alpha build results
-alpha/Build/bin/
-alpha/Build/obj/
+Builds/Alpha/Build/bin/
+Builds/Alpha/Build/obj/
 
 # Phoenix build results
-phoenix/Build/bin/
-phoenix/Build/obj/
+Builds/Phoenix/Build/bin/
+Builds/Phoenix/Build/obj/
 
 # Emulation build results
-Emulation/Build/bin/
-Emulation/Build/obj/
+Builds/Emulation/Build/bin/
+Builds/Emulation/Build/obj/
 
 *.user
 *.sdf

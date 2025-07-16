@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A1652141-4F88-4C59-BC68-4F865A36C0CA}</ProjectGuid>
     <Keyword>Xbox360Proj</Keyword>
-    <ProjectName>phoenix</ProjectName>
+    <ProjectName>Phoenix</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'" Label="Configuration">
@@ -42,7 +42,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)bin\Xenon_Release\</OutDir>
     <IntDir>$(ProjectDir)obj\Xenon_Release\</IntDir>
-    <OutputFile>$(ProjectDir)bin\Xenon_Release\phoenix.exe</OutputFile>
+    <OutputFile>$(ProjectDir)bin\Xenon_Release\Phoenix.exe</OutputFile>
     <ImageXexOutput>$(ProjectDir)bin\Xenon_Release\$(ProjectName).xex</ImageXexOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
@@ -50,7 +50,7 @@
     <OutDir>$(ProjectDir)bin\Xenon_Debug\</OutDir>
     <IntDir>$(ProjectDir)obj\Xenon_Debug\</IntDir>
     <ImageXexOutput>$(ProjectDir)bin\Xenon_Debug\$(ProjectName).xex</ImageXexOutput>
-    <OutputFile>$(ProjectDir)bin\Xenon_Debug\phoenix.exe</OutputFile>
+    <OutputFile>$(ProjectDir)bin\Xenon_Debug\Phoenix.exe</OutputFile>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
     <ClCompile>
