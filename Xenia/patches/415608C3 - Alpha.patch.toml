@@ -22,24 +22,12 @@ hash = "8065554A6AF089B0" # CoDMP.exe
 		address = 0x8263C52C
 		value = 0x60000000
 
-	[[patch.be32]]
-		address = 0x82511F80
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x82245234
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x828D4A9C
-		value = 0x60000000
-
 [[patch]]
 	name = "kys"
 	author = "hindercanrun"
 	is_enabled = true
 
-	# stupid spamming stream starving print JUST EAT RETARD
+	# stream starving print
 	[[patch.be32]]
 		address = 0x8274CB88
 		value = 0x60000000
@@ -60,10 +48,6 @@ hash = "8065554A6AF089B0" # CoDMP.exe
 		value = 0x60000000
 
 	[[patch.be32]]
-		address = 0x824E4F50
-		value = 0x60000000
-
-	[[patch.be32]]
 		address = 0x825D8DA4
 		value = 0x60000000
 
@@ -74,56 +58,4 @@ hash = "8065554A6AF089B0" # CoDMP.exe
 
 	[[patch.be32]]
 		address = 0x825E3268
-		value = 0x60000000
-
-	# TEMP: make friends list openable
-	[[patch.be32]]
-		address = 0x8277891C
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x8277F6F0
-		value = 0x60000000
-	
-	[[patch.be32]]
-		address = 0x8277F2AC
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x8277F400
-		value = 0x60000000
-
-	# TEMP: shit
-	[[patch.be32]]
-		address = 0x82771F9C
-		value = 0x60000000
-
-	# MVO
-	[[patch.be32]]
-		address = 0x825FE098
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x825FDD3C
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x825D86D4
-		value = 0x60000000
-
-	# TEMP: disable some BD checks to prevent freezing
-	[[patch.be32]]
-		address = 0x827B5378
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x827B5048
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x824ED418
-		value = 0x60000000
-
-	[[patch.be32]]
-		address = 0x824E5158
 		value = 0x60000000
