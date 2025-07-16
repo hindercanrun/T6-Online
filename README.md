@@ -19,6 +19,7 @@
 - [x] Phoenix
 - [x] Emulation
 - [ ] ZombiesCma
+- [ ] Mob of the Dead First Playable
 - [ ] Origins First Playable
 - [x] Origins Final
 - [x] RFAZIO
