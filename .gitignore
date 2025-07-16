@@ -7,6 +7,10 @@ Builds/Greenlight/Output/Obj/
 Builds/Alpha/Output/Bin/
 Builds/Alpha/Output/Obj/
 
+# Press build results
+Builds/Press/Output/Bin/
+Builds/Press/Output/Obj/
+
 # Phoenix build results
 Builds/Phoenix/Output/Bin/
 Builds/Phoenix/Output/Obj/
