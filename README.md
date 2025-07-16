@@ -17,7 +17,7 @@
 - [x] alpha
 - [ ] july_press_final
 - [x] Phoenix
-- [ ] Emulation
+- [x] Emulation
 - [ ] zombiesCma
 - [ ] rfazio *(maybe)*
 
