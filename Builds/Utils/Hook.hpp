@@ -1,5 +1,8 @@
 #pragma once
 
+#include <xtl.h>
+#include <stdint.h>
+
 #define MASK_N_BITS(N) ((1 << (N)) - 1)
 
 #define POWERPC_HI(X) ((X >> 16) & 0xFFFF)

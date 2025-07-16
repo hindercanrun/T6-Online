@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Utils">
-      <UniqueIdentifier>{37574947-7619-48b4-a2d9-0f450e2f61e8}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\Src\Utils\Hook.cpp">
+    <ClCompile Include="..\Src\Main.cpp" />
+    <ClCompile Include="..\..\Utils\Hook.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="..\Src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Src\Utils\Hook.hpp">
+    <ClInclude Include="..\Src\Std_Include.hpp" />
+    <ClInclude Include="..\..\Utils\Hook.hpp">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="..\Src\Std_Include.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{eb05ad92-6088-4a69-a528-60380a35486c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

@@ -11,13 +11,10 @@
       <UniqueIdentifier>{5c4749ce-ede5-4789-932a-ad5c23387666}</UniqueIdentifier>
     </Filter>
     <Filter Include="Utils">
-      <UniqueIdentifier>{37574947-7619-48b4-a2d9-0f450e2f61e8}</UniqueIdentifier>
+      <UniqueIdentifier>{289593e3-77a1-47d1-a3ac-3fa07f8b93d5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Src\Utils\Hook.cpp">
-      <Filter>Utils</Filter>
-    </ClCompile>
     <ClCompile Include="..\Src\Game\Symbols.cpp">
       <Filter>Game</Filter>
     </ClCompile>
@@ -28,11 +25,11 @@
       <Filter>Components\Modules</Filter>
     </ClCompile>
     <ClCompile Include="..\Src\Main.cpp" />
+    <ClCompile Include="..\..\Utils\Hook.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Src\Utils\Hook.hpp">
-      <Filter>Utils</Filter>
-    </ClInclude>
     <ClInclude Include="..\Src\Game\Symbols.hpp">
       <Filter>Game</Filter>
     </ClInclude>
@@ -43,5 +40,8 @@
       <Filter>Components\Modules</Filter>
     </ClInclude>
     <ClInclude Include="..\Src\Std_Include.hpp" />
+    <ClInclude Include="..\..\Utils\Hook.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

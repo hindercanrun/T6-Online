@@ -1,4 +1,3 @@
-#include "..\Std_Include.hpp"
 #include "Hook.hpp"
 
 #pragma section(".text")

@@ -111,12 +111,12 @@
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Utils\Hook.cpp" />
     <ClCompile Include="..\Src\Main.cpp" />
-    <ClCompile Include="..\Src\Utils\Hook.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Utils\Hook.hpp" />
     <ClInclude Include="..\Src\Std_Include.hpp" />
-    <ClInclude Include="..\Src\Utils\Hook.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
