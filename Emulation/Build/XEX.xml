@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xex>
+  <baseaddr addr="0x91500000"/>         <!-- Sets preferred base address in memory -->
+
+  <sysdll/>                             <!-- Marks it as a system DLL -->
+
+  <format>
+    <compressed/>                       <!-- Enables compression of the .xex -->
+  </format>
+
+  <mediatypes>
+    <default/>                          <!-- Enables running from default media  -->
+    <allpackages/>                      <!-- Allows all content packages -->
+  </mediatypes>
+
+  <gameregion>
+    <all/>                              <!-- No region locking -->
+  </gameregion>
+</xex>

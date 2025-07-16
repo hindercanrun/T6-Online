@@ -11,6 +11,10 @@ alpha/Build/obj/
 phoenix/Build/bin/
 phoenix/Build/obj/
 
+# Emulation build results
+Emulation/Build/bin/
+Emulation/Build/obj/
+
 *.user
 *.sdf
 *.suo
