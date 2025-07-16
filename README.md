@@ -1,6 +1,6 @@
 <div align="center">
 
-# Proof-of-Concept plugin to patch Treyarch's pre-release T6 builds to allow access to the online only menus
+# Proof-of-Concept plugin to patch Treyarch's developer T6 builds to allow access to the online only menus
 
 </div>
 
@@ -13,13 +13,13 @@
 ----
 
 ### Supported Builds:
-- [x] T6_greenlight_mp
-- [x] alpha
-- [ ] july_press_final
+- [x] Greenlight
+- [x] Alpha
+- [ ] Press
 - [x] Phoenix
 - [x] Emulation
-- [ ] zombiesCma
-- [ ] rfazio *(maybe)*
+- [ ] ZombiesCma
+- [x] RFAZIO
 
 ----
 
