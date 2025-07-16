@@ -6,7 +6,7 @@
 
 ### Building From Source
 1. **Clone** the Git repository or **download** as .ZIP and extract it to your desired location.
-2. **Open** up `game-mod.sln` in **Visual Studio 2010**.
+2. **Open** up `T6.sln` in **Visual Studio 2010**.
 3. **Build** the solution.
 4. Done.
 
@@ -18,8 +18,8 @@
 - [ ] july_press_final
 - [x] Phoenix
 - [ ] Emulation
-- [ ] rfazio
-- [ ] retail
+- [ ] zombiesCma
+- [ ] rfazio *(maybe)*
 
 ----
 
