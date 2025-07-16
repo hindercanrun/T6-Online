@@ -15,7 +15,7 @@
 ### Supported Builds:
 - [x] Greenlight
 - [x] Alpha
-- [ ] Press
+- [x] Press
 - [x] Phoenix
 - [x] Emulation
 - [ ] ZombiesCma
