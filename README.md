@@ -19,7 +19,8 @@
 - [x] Phoenix
 - [x] Emulation
 - [ ] ZombiesCma
-- [ ] Origins Final
+- [ ] Origins First Playable
+- [x] Origins Final
 - [x] RFAZIO
 
 ----
