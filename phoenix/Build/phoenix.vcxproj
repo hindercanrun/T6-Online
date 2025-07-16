@@ -111,14 +111,10 @@
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Src\Components\Loader.cpp" />
-    <ClCompile Include="..\Src\Components\Modules\Online.cpp" />
     <ClCompile Include="..\Src\Main.cpp" />
     <ClCompile Include="..\Src\Utils\Hook.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Src\Components\Loader.hpp" />
-    <ClInclude Include="..\Src\Components\Modules\Online.hpp" />
     <ClInclude Include="..\Src\Std_Include.hpp" />
     <ClInclude Include="..\Src\Utils\Hook.hpp" />
   </ItemGroup>
