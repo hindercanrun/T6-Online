@@ -13,13 +13,13 @@
 ----
 
 ### Supported Builds:
-- [x] T6_greenlight_mp
-- [x] alpha
-- [ ] july_press_final
+- [x] Greenlight
+- [x] Alpha
+- [ ] Press
 - [x] Phoenix
 - [x] Emulation
-- [ ] zombiesCma
-- [ ] rfazio *(maybe)*
+- [ ] ZombiesCma
+- [ ] RFAZIO *(maybe)*
 
 ----
 
