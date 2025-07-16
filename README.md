@@ -18,6 +18,7 @@
 - [x] Press
 - [x] Phoenix
 - [x] Emulation
+- [ ] ZBUILD
 - [ ] ZombiesCma
 - [ ] Mob of the Dead First Playable
 - [ ] Origins First Playable
