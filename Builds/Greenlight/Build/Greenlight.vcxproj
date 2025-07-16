@@ -112,14 +112,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Utils\Hook.cpp" />
-    <ClCompile Include="..\Src\Components\Loader.cpp" />
-    <ClCompile Include="..\Src\Components\Modules\Online.cpp" />
     <ClCompile Include="..\Src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Utils\Hook.hpp" />
-    <ClInclude Include="..\Src\Components\Loader.hpp" />
-    <ClInclude Include="..\Src\Components\Modules\Online.hpp" />
     <ClInclude Include="..\Src\Std_Include.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
