@@ -10,10 +10,18 @@
       <Platform>Xbox 360</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Phoenix\Main.cpp" />
+    <ClCompile Include="..\Utils\Hook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Phoenix\Std_Include.hpp" />
+    <ClInclude Include="..\Utils\Hook.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8E53E0AF-FD84-4F0A-B85D-7B518BC0802E}</ProjectGuid>
+    <ProjectGuid>{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}</ProjectGuid>
     <Keyword>Xbox360Proj</Keyword>
-    <ProjectName>Emulation</ProjectName>
+    <ProjectName>Greenlight</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'" Label="Configuration">
@@ -40,17 +48,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)bin\Xenon_Release\</OutDir>
-    <IntDir>$(ProjectDir)obj\Xenon_Release\</IntDir>
-    <OutputFile>$(ProjectDir)bin\Xenon_Release\Emulation.exe</OutputFile>
-    <ImageXexOutput>$(ProjectDir)bin\Xenon_Release\$(ProjectName).xex</ImageXexOutput>
+    <OutDir>$(ProjectDir)Output\Bin\Release\</OutDir>
+    <IntDir>$(ProjectDir)Output\Obj\Release\</IntDir>
+    <OutputFile>$(ProjectDir)Output\Bin\Release\Greenlight.exe</OutputFile>
+    <ImageXexOutput>$(ProjectDir)Output\Bin\Release\Greenlight.xex</ImageXexOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)bin\Xenon_Debug\</OutDir>
-    <IntDir>$(ProjectDir)obj\Xenon_Debug\</IntDir>
-    <ImageXexOutput>$(ProjectDir)bin\Xenon_Debug\$(ProjectName).xex</ImageXexOutput>
-    <OutputFile>$(ProjectDir)bin\Xenon_Debug\Emulation.exe</OutputFile>
+    <OutDir>$(ProjectDir)Output\Bin\Debug\</OutDir>
+    <IntDir>$(ProjectDir)Output\Obj\Debug\</IntDir>
+    <ImageXexOutput>$(ProjectDir)Output\Bin\Debug\Greenlight.xex</ImageXexOutput>
+    <OutputFile>$(ProjectDir)Output\Bin\Debug\Greenlight.exe</OutputFile>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
     <ClCompile>
@@ -79,7 +87,7 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
@@ -107,17 +115,9 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Utils\Hook.cpp" />
-    <ClCompile Include="..\Src\Main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Utils\Hook.hpp" />
-    <ClInclude Include="..\Src\Std_Include.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

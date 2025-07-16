@@ -1,9 +1,44 @@
 #include "Std_Include.hpp"
 
-#include "../../Utils/Hook.hpp"
+#include "../Utils/Hook.hpp"
 
 namespace Online
 {
+	typedef struct _XPARTY_CUSTOM_DATA
+	{
+		ULONGLONG			qwFirst;
+		ULONGLONG			qwSecond;
+	} XPARTY_CUSTOM_DATA;
+
+#define XPARTY_MAX_USERS	8
+	typedef struct _XPARTY_USER_INFO
+	{
+		XUID				Xuid;
+		CHAR				GamerTag[XUSER_NAME_SIZE];
+		DWORD				dwUserIndex;
+		XONLINE_NAT_TYPE	NatType;
+		DWORD				dwTitleId;
+		DWORD				dwFlags;
+		XSESSION_INFO		SessionInfo;
+		XPARTY_CUSTOM_DATA	CustomData;
+	} XPARTY_USER_INFO;
+
+	typedef struct _XPARTY_USER_LIST
+	{
+		DWORD dwUserCount;
+		XPARTY_USER_INFO Users[XPARTY_MAX_USERS];
+	} XPARTY_USER_LIST;
+
+	Utils::Hook::Detour XPartyGetUserList_Hook;
+	HRESULT XPartyGetUserList(XPARTY_USER_LIST* pUserList)
+	{
+		if (pUserList)
+		{
+			pUserList->dwUserCount = 1;
+		}
+		return S_OK;
+	}
+
 	typedef enum ControllerIndex_t
 	{
 		INVALID_CONTROLLER_PORT = -1,
@@ -149,35 +184,31 @@ namespace Online
 		return;
 	}
 
-	Utils::Hook::Detour LiveStorage_DoWeHaveStats_Hook;
-	bool LiveStorage_DoWeHaveStats(int a1, int a2)
-	{
-		return TRUE;
-	}
-
 	void RegisterHooks()
 	{
-		Live_IsUserSignedInToDemonware_Hook.Create(0x8286A8F8, Live_IsUserSignedInToDemonware);
-		Live_IsUserSignedInToLive_Hook.Create(0x82871190, Live_IsUserSignedInToLive);
-		Live_Base_IsConnected_Hook.Create(0x828C8520, Live_Base_IsConnected);
-		LiveStorage_DoWeHaveFFOTD_Hook.Create(0x828C24E0, LiveStorage_DoWeHaveFFOTD);
-		LiveStorage_ValidateFFOTD_Hook.Create(0x828C25D0, LiveStorage_ValidateFFOTD);
-		LiveStorage_DoWeHaveAllStats_Hook.Create(0x828B5A08, LiveStorage_DoWeHaveAllStats);
-		LiveStorage_DoWeHavePlaylists_Hook.Create(0x828C16A8, LiveStorage_DoWeHavePlaylists);
-		Live_HasMultiplayerPrivileges_Hook.Create(0x828C9840, Live_HasMultiplayerPrivileges);
-		LiveStorage_DoWeHaveLeagues_Hook.Create(0x828C16D8, LiveStorage_DoWeHaveLeagues);
-		LiveStorage_IsTimeSynced_Hook.Create(0x828B7988, LiveStorage_IsTimeSynced);
-		LiveStorage_DoWeHaveContracts_Hook.Create(0x828C16B8, LiveStorage_DoWeHaveContracts);
-		LiveElite_CheckProgress_Hook.Create(0x8287A968, LiveElite_CheckProgress);
-		Live_IsLspCacheInited_Hook.Create(0x828CC858, Live_IsLspCacheInited);
-		SanityCheckSession_Hook.Create(0x82899588, SanityCheckSession);
-		LiveStorage_DoWeHaveStats_Hook.Create(0x828B59B0, LiveStorage_DoWeHaveStats);
+		XPartyGetUserList_Hook.Create(0x829F0608, XPartyGetUserList);
+		Live_IsUserSignedInToDemonware_Hook.Create(0x827AC038, Live_IsUserSignedInToDemonware);
+		Live_IsUserSignedInToLive_Hook.Create(0x827B0A08, Live_IsUserSignedInToLive);
+		Live_Base_IsConnected_Hook.Create(0x827FA9E0, Live_Base_IsConnected);
+		LiveStorage_DoWeHaveFFOTD_Hook.Create(0x827F4EF8, LiveStorage_DoWeHaveFFOTD);
+		LiveStorage_ValidateFFOTD_Hook.Create(0x827F4FE8, LiveStorage_ValidateFFOTD);
+		LiveStorage_DoWeHaveAllStats_Hook.Create(0x827EAF10, LiveStorage_DoWeHaveAllStats);
+		LiveStorage_DoWeHavePlaylists_Hook.Create(0x827F4458, LiveStorage_DoWeHavePlaylists);
+		Live_HasMultiplayerPrivileges_Hook.Create(0x827FBCA0, Live_HasMultiplayerPrivileges);
+		LiveStorage_DoWeHaveLeagues_Hook.Create(0x827F4488, LiveStorage_DoWeHaveLeagues);
+		LiveStorage_IsTimeSynced_Hook.Create(0x827ECBD0, LiveStorage_IsTimeSynced);
+		LiveStorage_DoWeHaveContracts_Hook.Create(0x827F4468, LiveStorage_DoWeHaveContracts);
+		LiveElite_CheckProgress_Hook.Create(0x827B9B60, LiveElite_CheckProgress);
+		LiveCAC_CheckProgress_Hook.Create(0x8250E8F0, LiveCAC_CheckProgress);
+		Live_IsLspCacheInited_Hook.Create(0x827FF3A8, Live_IsLspCacheInited);
+		SanityCheckSession_Hook.Create(0x827D3CA0, SanityCheckSession);
 
-		Utils::Hook::SetValue<uint8_t>(0x84925529, 1); // s_geoLocationRetrieved
+		Utils::Hook::SetValue<uint8_t>(0x8469B230, 1); // s_geoLocationRetrieved
 	}
 
 	void UnregisterHooks()
 	{
+		XPartyGetUserList_Hook.Clear();
 		Live_IsUserSignedInToDemonware_Hook.Clear();
 		Live_IsUserSignedInToLive_Hook.Clear();
 		Live_Base_IsConnected_Hook.Clear();
@@ -193,7 +224,6 @@ namespace Online
 		LiveCAC_CheckProgress_Hook.Clear();
 		Live_IsLspCacheInited_Hook.Clear();
 		SanityCheckSession_Hook.Clear();
-		LiveStorage_DoWeHaveStats_Hook.Clear();
 	}
 }
 

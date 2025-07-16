@@ -2,19 +2,19 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Utils">
-      <UniqueIdentifier>{289593e3-77a1-47d1-a3ac-3fa07f8b93d5}</UniqueIdentifier>
+      <UniqueIdentifier>{4b718c20-8348-4f3a-b42c-355ffead940c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Src\Main.cpp" />
-    <ClCompile Include="..\..\Utils\Hook.cpp">
+    <ClCompile Include="..\Utils\Hook.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\Phoenix\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Src\Std_Include.hpp" />
-    <ClInclude Include="..\..\Utils\Hook.hpp">
+    <ClInclude Include="..\Utils\Hook.hpp">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="..\Phoenix\Std_Include.hpp" />
   </ItemGroup>
 </Project>

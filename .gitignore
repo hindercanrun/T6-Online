@@ -1,23 +1,23 @@
 
 # Greenlight build results
-Builds/Greenlight/Build/bin/
-Builds/Greenlight/Build/obj/
+Builds/Greenlight/Output/bin/
+Builds/Greenlight/Output/obj/
 
 # Alpha build results
-Builds/Alpha/Build/bin/
-Builds/Alpha/Build/obj/
+Builds/Alpha/Output/bin/
+Builds/Alpha/Output/obj/
 
 # Phoenix build results
-Builds/Phoenix/Build/bin/
-Builds/Phoenix/Build/obj/
+Builds/Phoenix/Output/bin/
+Builds/Phoenix/Output/obj/
 
 # Emulation build results
-Builds/Emulation/Build/bin/
-Builds/Emulation/Build/obj/
+Builds/Emulation/Output/bin/
+Builds/Emulation/Output/obj/
 
 # RFAZIO build results
-Builds/RFAZIO/Build/bin/
-Builds/RFAZIO/Build/obj/
+Builds/RFAZIO/Output/bin/
+Builds/RFAZIO/Output/obj/
 
 *.user
 *.sdf

@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A1652141-4F88-4C59-BC68-4F865A36C0CA}</ProjectGuid>
+    <ProjectGuid>{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}</ProjectGuid>
     <Keyword>Xbox360Proj</Keyword>
-    <ProjectName>Phoenix</ProjectName>
+    <ProjectName>Alpha</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'" Label="Configuration">
@@ -40,17 +40,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)bin\Xenon_Release\</OutDir>
-    <IntDir>$(ProjectDir)obj\Xenon_Release\</IntDir>
-    <OutputFile>$(ProjectDir)bin\Xenon_Release\Phoenix.exe</OutputFile>
-    <ImageXexOutput>$(ProjectDir)bin\Xenon_Release\$(ProjectName).xex</ImageXexOutput>
+    <OutDir>$(ProjectDir)Output\Bin\Release\</OutDir>
+    <IntDir>$(ProjectDir)Output\Obj\Release\</IntDir>
+    <OutputFile>$(ProjectDir)Output\Bin\Release\Alpha.exe</OutputFile>
+    <ImageXexOutput>$(ProjectDir)Output\Bin\Release\Alpha.xex</ImageXexOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)bin\Xenon_Debug\</OutDir>
-    <IntDir>$(ProjectDir)obj\Xenon_Debug\</IntDir>
-    <ImageXexOutput>$(ProjectDir)bin\Xenon_Debug\$(ProjectName).xex</ImageXexOutput>
-    <OutputFile>$(ProjectDir)bin\Xenon_Debug\Phoenix.exe</OutputFile>
+    <OutDir>$(ProjectDir)Output\Bin\Debug\</OutDir>
+    <IntDir>$(ProjectDir)Output\Obj\Debug\</IntDir>
+    <ImageXexOutput>$(ProjectDir)Output\Bin\Debug\Alpha.xex</ImageXexOutput>
+    <OutputFile>$(ProjectDir)Output\Bin\Debug\Alpha.exe</OutputFile>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
     <ClCompile>
@@ -79,7 +79,7 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
@@ -107,16 +107,16 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Utils\Hook.cpp" />
-    <ClCompile Include="..\Src\Main.cpp" />
+    <ClInclude Include="..\Utils\Hook.hpp" />
+    <ClInclude Include="Std_Include.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Utils\Hook.hpp" />
-    <ClInclude Include="..\Src\Std_Include.hpp" />
+    <ClCompile Include="..\Utils\Hook.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
