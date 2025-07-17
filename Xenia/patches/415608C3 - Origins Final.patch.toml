@@ -1,0 +1,47 @@
+title_name = "COD: Black Ops II"
+title_id = "415608C3"
+hash = "98FBBA26FEE55BAA" # CoDMP.exe
+
+[[patch]]
+	name = "xenia fixes"
+	author = "hindercanrun"
+	is_enabled = true
+
+	# exe booting
+	[[patch.be32]]
+		address = 0x82730670
+		value = 0x60000000
+
+	# anti-piracy check
+	[[patch.be32]]
+		address = 0x823E2EC8
+		value = 0x60000000
+
+[[patch]]
+	name = "kys"
+	author = "hindercanrun"
+	is_enabled = true
+
+	# dvar set spam
+	[[patch.be32]]
+		address = 0x826C33AC
+		value = 0x60000000
+
+	# dvar dump
+	[[patch.be32]]
+		address = 0x823D0720
+		value = 0x60000000
+
+	# sound bank error
+	[[patch.be32]]
+		address = 0x82848820
+		value = 0x60000000
+
+	# nested assert
+	[[patch.be32]]
+		address = 0x828B59BC
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x82870E08
+		value = 0x60000000
