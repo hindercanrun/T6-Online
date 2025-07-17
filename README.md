@@ -15,10 +15,12 @@
 ### Supported Builds:
 - [x] Greenlight
 - [x] Alpha
-- [ ] Press
+- [x] Press
 - [x] Phoenix
 - [x] Emulation
+- [ ] ZBUILD
 - [ ] ZombiesCma
+- [x] Mob of the Dead First Playable
 - [ ] Origins First Playable
 - [x] Origins Final
 - [x] RFAZIO
