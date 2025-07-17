@@ -1,0 +1,13 @@
+title_name = "COD: Black Ops II"
+title_id = "415608C3"
+hash = "EB81E92CD9C31CDF" # default_mp.xex
+
+[[patch]]
+	name = "xenia fixes"
+	author = "hindercanrun"
+	is_enabled = true
+
+	# anti-piracy check
+	[[patch.be32]]
+		address = 0x822804E4
+		value = 0x60000000
