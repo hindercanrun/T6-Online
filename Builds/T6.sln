@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Press", "Press\Press.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mob of The Dead First Playable", "Mob of The Dead First Playable\Mob of The Dead First Playable.vcxproj", "{4A41972E-283B-435F-A283-05477A8577FA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Origins First Playable", "Origins First Playable\Origins First Playable.vcxproj", "{583118E6-C325-4CFC-8CD8-00F67C986934}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Xbox 360 = Debug|Xbox 360
@@ -73,6 +75,12 @@ Global
 		{4A41972E-283B-435F-A283-05477A8577FA}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
 		{4A41972E-283B-435F-A283-05477A8577FA}.Release|Xbox 360.Build.0 = Release|Xbox 360
 		{4A41972E-283B-435F-A283-05477A8577FA}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
+		{583118E6-C325-4CFC-8CD8-00F67C986934}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{583118E6-C325-4CFC-8CD8-00F67C986934}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{583118E6-C325-4CFC-8CD8-00F67C986934}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{583118E6-C325-4CFC-8CD8-00F67C986934}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{583118E6-C325-4CFC-8CD8-00F67C986934}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{583118E6-C325-4CFC-8CD8-00F67C986934}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,5 +94,6 @@ Global
 		{BC54385E-8662-412F-B202-62A58785A9F4} = {6993937E-4408-497C-B936-A0EEB396C87F}
 		{460CF8C5-D794-459A-9DB6-2DEEB38CDFED} = {6993937E-4408-497C-B936-A0EEB396C87F}
 		{4A41972E-283B-435F-A283-05477A8577FA} = {6993937E-4408-497C-B936-A0EEB396C87F}
+		{583118E6-C325-4CFC-8CD8-00F67C986934} = {6993937E-4408-497C-B936-A0EEB396C87F}
 	EndGlobalSection
 EndGlobal
