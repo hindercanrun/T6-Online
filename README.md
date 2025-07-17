@@ -21,7 +21,7 @@
 - [ ] ZBUILD
 - [ ] ZombiesCma
 - [x] Mob of the Dead First Playable
-- [ ] Origins First Playable
+- [x] Origins First Playable
 - [x] Origins Final
 - [x] RFAZIO
 
