@@ -20,7 +20,7 @@
 - [x] Emulation
 - [ ] ZBUILD
 - [ ] ZombiesCma
-- [ ] Mob of the Dead First Playable
+- [x] Mob of the Dead First Playable
 - [ ] Origins First Playable
 - [x] Origins Final
 - [x] RFAZIO
