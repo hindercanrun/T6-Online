@@ -1,6 +1,6 @@
 # Greenlight build results
-Source/Builds/Greenlight/Output/Bin/
-Source/Builds/Greenlight/Output/Obj/
+Source/Builds/Greenlight/CoDMP/Output/
+Source/Builds/Greenlight/CoDMP/Output/
 
 # Alpha build results
 Source/Builds/Alpha/CoDMP/Output/

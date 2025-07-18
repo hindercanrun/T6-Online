@@ -11,12 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Utils\Hook.cpp" />
-    <ClCompile Include="..\Phoenix\Main.cpp" />
+    <ClCompile Include="..\..\..\Utils\Hook.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Utils\Hook.hpp" />
-    <ClInclude Include="..\Phoenix\Std_Include.hpp" />
+    <ClInclude Include="..\..\..\Utils\Hook.hpp" />
+    <ClInclude Include="Std_Include.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{946A3DFF-7B7B-49F2-B6A7-EA785557A13F}</ProjectGuid>
@@ -87,7 +87,7 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
@@ -115,7 +115,7 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
