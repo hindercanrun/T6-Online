@@ -1,8 +1,4 @@
-<div align="center">
-
-# Proof-of-Concept plugin to patch Treyarch's developer T6 builds to allow access to the online only menus
-
-</div>
+# Proof-of-Concept plugin to allow access to online menus in Treyarch's T6 development builds
 
 ### Building From Source
 1. **Clone** the Git repository or **download** as .ZIP and extract it to your desired location.
