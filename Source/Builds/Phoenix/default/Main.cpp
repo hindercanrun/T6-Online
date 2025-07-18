@@ -1,6 +1,6 @@
 #include "Std_Include.hpp"
 
-#include "../../Utils/Hook.hpp"
+#include "../../../Utils/Hook.hpp"
 
 namespace Online
 {
@@ -19,19 +19,6 @@ namespace Online
 	BOOL Live_IsUserSignedInToDemonware(ControllerIndex controllerIndex)
 	{
 		return BD_NOT_CONNECTED;
-	}
-
-	Utils::Hook::Detour Live_IsUserSignedInToLive_Hook;
-	BOOL Live_IsUserSignedInToLive(ControllerIndex controllerIndex)
-	{
-		return BD_NOT_CONNECTED;
-	}
-
-#define XENON_STATUS_CONNECTED	5
-	Utils::Hook::Detour Live_Base_IsConnected_Hook;
-	BOOL Live_Base_IsConnected(ControllerIndex controllerIndex)
-	{
-		return XENON_STATUS_CONNECTED;
 	}
 
 	Utils::Hook::Detour LiveStorage_DoWeHaveFFOTD_Hook;
@@ -155,13 +142,10 @@ namespace Online
 	void UnregisterHooks()
 	{
 		Live_IsUserSignedInToDemonware_Hook.Clear();
-		Live_IsUserSignedInToLive_Hook.Clear();
-		Live_Base_IsConnected_Hook.Clear();
 		LiveStorage_DoWeHaveFFOTD_Hook.Clear();
 		LiveStorage_ValidateFFOTD_Hook.Clear();
 		LiveStorage_DoWeHaveAllStats_Hook.Clear();
 		LiveStorage_DoWeHavePlaylists_Hook.Clear();
-		Live_HasMultiplayerPrivileges_Hook.Clear();
 		LiveStorage_DoWeHaveLeagues_Hook.Clear();
 		LiveStorage_IsTimeSynced_Hook.Clear();
 		LiveStorage_DoWeHaveContracts_Hook.Clear();

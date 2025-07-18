@@ -15,8 +15,8 @@ Source/Builds/Press/default_mp/Output/
 Source/Builds/Press/default_mp/Output/
 
 # Phoenix build results
-Source/Builds/Phoenix/Output/Bin/
-Source/Builds/Phoenix/Output/Obj/
+Source/Builds/Phoenix/default/Output/
+Source/Builds/Phoenix/default/Output/
 
 # Emulation build results
 Source/Builds/Emulation/Output/Bin/
