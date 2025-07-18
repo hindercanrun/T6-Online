@@ -3,8 +3,10 @@ Source/Builds/Greenlight/Output/Bin/
 Source/Builds/Greenlight/Output/Obj/
 
 # Alpha build results
-Source/Builds/Alpha/Output/Bin/
-Source/Builds/Alpha/Output/Obj/
+Source/Builds/Alpha/CoDMP/Output/
+Source/Builds/Alpha/CoDMP/Output/
+Source/Builds/Alpha/default_mp/Output/
+Source/Builds/Alpha/default_mp/Output/
 
 # Press build results
 Source/Builds/Press/Output/Bin/
