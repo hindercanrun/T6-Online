@@ -143,6 +143,12 @@ namespace Online
 		return;
 	}
 
+	Utils::Hook::Detour LiveStats_CanPerformStatOperation_Hook;
+	int LiveStats_CanPerformStatOperation(int Controllerindex_t)
+	{
+		return 1;
+	}
+
 	void RegisterHooks()
 	{
 		Live_IsUserSignedInToDemonware_Hook.Create(0x824DD420, Live_IsUserSignedInToDemonware);
@@ -156,6 +162,7 @@ namespace Online
 		Utils::Hook::SetValue<uint8_t>(0x8425374C, 1); // s_geoLocationRetrieved
 		LiveElite_CheckProgress_Hook.Create(0x824E5998, LiveElite_CheckProgress);
 		LiveCAC_CheckProgress_Hook.Create(0x82347CC0, LiveCAC_CheckProgress);
+		LiveStats_CanPerformStatOperation_Hook.Create(0x824FBA08 , LiveStats_CanPerformStatOperation);
 	}
 
 	void UnregisterHooks()
@@ -170,6 +177,7 @@ namespace Online
 		LiveStorage_DoWeHaveContracts_Hook.Clear();
 		LiveElite_CheckProgress_Hook.Clear();
 		LiveCAC_CheckProgress_Hook.Clear();
+		LiveStats_CanPerformStatOperation_Hook.Clear();
 	}
 }
 
