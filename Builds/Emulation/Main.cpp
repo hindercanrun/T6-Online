@@ -184,6 +184,12 @@ namespace Online
 		return;
 	}
 
+	Utils::Hook::Detour LiveStats_CanPerformStatOperation_Hook;
+	int LiveStats_CanPerformStatOperation(int a1)
+	{
+		return 1;
+	}
+
 	void RegisterHooks()
 	{
 		XPartyGetUserList_Hook.Create(0x829F0608, XPartyGetUserList);
@@ -202,6 +208,7 @@ namespace Online
 		LiveCAC_CheckProgress_Hook.Create(0x8250E8F0, LiveCAC_CheckProgress);
 		Live_IsLspCacheInited_Hook.Create(0x827FF3A8, Live_IsLspCacheInited);
 		SanityCheckSession_Hook.Create(0x827D3CA0, SanityCheckSession);
+		LiveStats_CanPerformStatOperation_Hook.Create(0x827D9AC8, LiveStats_CanPerformStatOperation);
 
 		Utils::Hook::SetValue<uint8_t>(0x8469B230, 1); // s_geoLocationRetrieved
 	}
@@ -224,6 +231,7 @@ namespace Online
 		LiveCAC_CheckProgress_Hook.Clear();
 		Live_IsLspCacheInited_Hook.Clear();
 		SanityCheckSession_Hook.Clear();
+		LiveStats_CanPerformStatOperation_Hook.Clear();
 	}
 }
 
