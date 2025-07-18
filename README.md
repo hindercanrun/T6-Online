@@ -13,6 +13,12 @@
 - [x] Origins Final
 - [x] RFAZIO
 
+## Road map:
+- [x] Access to online menus
+- [ ] DemonWare fixed and connected and/or emulated
+- [ ] Lobby/Party support
+- [ ] Match-Making support
+
 ---
 
 > [!IMPORTANT]
