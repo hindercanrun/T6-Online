@@ -115,7 +115,7 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
