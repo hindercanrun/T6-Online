@@ -19,8 +19,10 @@ Source/Builds/Phoenix/default/Output/
 Source/Builds/Phoenix/default/Output/
 
 # Emulation build results
-Source/Builds/Emulation/Output/Bin/
-Source/Builds/Emulation/Output/Obj/
+Source/Builds/Emulation/CoDMP/Output/
+Source/Builds/Emulation/CoDMP/Output/
+Source/Builds/Emulation/default_mp/Output/
+Source/Builds/Emulation/default_mp/Output/
 
 # Mob of the Dead First Playable build results
 Source/Builds/Mob of the Dead First Playable/default_mp/Output/

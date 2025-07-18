@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8E53E0AF-FD84-4F0A-B85D-7B518BC0802E}</ProjectGuid>
+    <ProjectGuid>{68B685AA-9163-4107-B838-2BEF8BFE749E}</ProjectGuid>
     <Keyword>Xbox360Proj</Keyword>
     <ProjectName>Emulation</ProjectName>
   </PropertyGroup>
@@ -79,7 +79,7 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
@@ -111,11 +111,11 @@
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Utils\Hook.cpp" />
+    <ClCompile Include="..\..\..\Utils\Hook.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Utils\Hook.hpp" />
+    <ClInclude Include="..\..\..\Utils\Hook.hpp" />
     <ClInclude Include="Std_Include.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
