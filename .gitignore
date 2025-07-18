@@ -9,8 +9,10 @@ Source/Builds/Alpha/default_mp/Output/
 Source/Builds/Alpha/default_mp/Output/
 
 # Press build results
-Source/Builds/Press/Output/Bin/
-Source/Builds/Press/Output/Obj/
+Source/Builds/Press/CoDMP/Output/
+Source/Builds/Press/CoDMP/Output/
+Source/Builds/Press/default_mp/Output/
+Source/Builds/Press/default_mp/Output/
 
 # Phoenix build results
 Source/Builds/Phoenix/Output/Bin/

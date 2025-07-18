@@ -1,6 +1,6 @@
 #include "Std_Include.hpp"
 
-#include "../../Utils/Hook.hpp"
+#include "../../../Utils/Hook.hpp"
 
 namespace Online
 {
@@ -19,19 +19,6 @@ namespace Online
 	BOOL Live_IsUserSignedInToDemonware(ControllerIndex controllerIndex)
 	{
 		return BD_NOT_CONNECTED;
-	}
-
-	Utils::Hook::Detour Live_IsUserSignedInToLive_Hook;
-	BOOL Live_IsUserSignedInToLive(ControllerIndex controllerIndex)
-	{
-		return BD_NOT_CONNECTED;
-	}
-
-#define XENON_STATUS_CONNECTED	5
-	Utils::Hook::Detour Live_Base_IsConnected_Hook;
-	BOOL Live_Base_IsConnected(ControllerIndex controllerIndex)
-	{
-		return XENON_STATUS_CONNECTED;
 	}
 
 	Utils::Hook::Detour LiveStorage_DoWeHaveFFOTD_Hook;
@@ -54,12 +41,6 @@ namespace Online
 
 	Utils::Hook::Detour LiveStorage_DoWeHavePlaylists_Hook;
 	bool LiveStorage_DoWeHavePlaylists()
-	{
-		return TRUE;
-	}
-
-	Utils::Hook::Detour Live_HasMultiplayerPrivileges_Hook;
-	bool Live_HasMultiplayerPrivileges(ControllerIndex controllerIndex)
 	{
 		return TRUE;
 	}
@@ -137,48 +118,33 @@ namespace Online
 		return TRUE;
 	}
 
-	Utils::Hook::Detour SanityCheckSession_Hook;
-	void SanityCheckSession(const char** unknown)
-	{
-		return;
-	}
-
 	void RegisterHooks()
 	{
-		Live_IsUserSignedInToDemonware_Hook.Create(0x82764EE0, Live_IsUserSignedInToDemonware);
-		Live_IsUserSignedInToLive_Hook.Create(0x82769268, Live_IsUserSignedInToLive);
-		Live_Base_IsConnected_Hook.Create(0x827B6C58, Live_Base_IsConnected);
-		LiveStorage_DoWeHaveFFOTD_Hook.Create(0x827ADD88, LiveStorage_DoWeHaveFFOTD);
-		LiveStorage_ValidateFFOTD_Hook.Create(0x827ADE78, LiveStorage_ValidateFFOTD);
-		LiveStorage_DoWeHaveAllStats_Hook.Create(0x827A20B8, LiveStorage_DoWeHaveAllStats);
-		LiveStorage_DoWeHavePlaylists_Hook.Create(0x827AD060, LiveStorage_DoWeHavePlaylists);
-		Live_HasMultiplayerPrivileges_Hook.Create(0x823426E8, Live_HasMultiplayerPrivileges);
-		LiveStorage_DoWeHaveLeagues_Hook.Create(0x827AD090, LiveStorage_DoWeHaveLeagues);
-		LiveStorage_IsTimeSynced_Hook.Create(0x827A3EB8, LiveStorage_IsTimeSynced);
-		LiveStorage_DoWeHaveContracts_Hook.Create(0x827AD070, LiveStorage_DoWeHaveContracts);
-		LiveElite_CheckProgress_Hook.Create(0x82770F90, LiveElite_CheckProgress);
-		LiveCAC_CheckProgress_Hook.Create(0x824E23A8, LiveCAC_CheckProgress);
-		SanityCheckSession_Hook.Create(0x82789430, SanityCheckSession);
-
-		Utils::Hook::SetValue<uint8_t>(0x849040D4, 1); // s_geoLocationRetrieved
+		Live_IsUserSignedInToDemonware_Hook.Create(0x824DE818, Live_IsUserSignedInToDemonware);
+		LiveStorage_DoWeHaveFFOTD_Hook.Create(0x82512EC8, LiveStorage_DoWeHaveFFOTD);
+		LiveStorage_ValidateFFOTD_Hook.Create(0x82512EF8, LiveStorage_ValidateFFOTD);
+		LiveStorage_DoWeHaveAllStats_Hook.Create(0x8250A6E0, LiveStorage_DoWeHaveAllStats);
+		LiveStorage_DoWeHavePlaylists_Hook.Create(0x82512638, LiveStorage_DoWeHavePlaylists);
+		LiveStorage_DoWeHaveLeagues_Hook.Create(0x82512668, LiveStorage_DoWeHaveLeagues);
+		LiveStorage_IsTimeSynced_Hook.Create(0x8250B650, LiveStorage_IsTimeSynced);
+		LiveStorage_DoWeHaveContracts_Hook.Create(0x82512648, LiveStorage_DoWeHaveContracts);
+		Utils::Hook::SetValue<uint8_t>(0x842560CC, 1); // s_geoLocationRetrieved
+		LiveElite_CheckProgress_Hook.Create(0x824E6CF0, LiveElite_CheckProgress);
+		LiveCAC_CheckProgress_Hook.Create(0x82348880, LiveCAC_CheckProgress);
 	}
 
 	void UnregisterHooks()
 	{
 		Live_IsUserSignedInToDemonware_Hook.Clear();
-		Live_IsUserSignedInToLive_Hook.Clear();
-		Live_Base_IsConnected_Hook.Clear();
 		LiveStorage_DoWeHaveFFOTD_Hook.Clear();
 		LiveStorage_ValidateFFOTD_Hook.Clear();
 		LiveStorage_DoWeHaveAllStats_Hook.Clear();
 		LiveStorage_DoWeHavePlaylists_Hook.Clear();
-		Live_HasMultiplayerPrivileges_Hook.Clear();
 		LiveStorage_DoWeHaveLeagues_Hook.Clear();
 		LiveStorage_IsTimeSynced_Hook.Clear();
 		LiveStorage_DoWeHaveContracts_Hook.Clear();
 		LiveElite_CheckProgress_Hook.Clear();
 		LiveCAC_CheckProgress_Hook.Clear();
-		SanityCheckSession_Hook.Clear();
 	}
 }
 
