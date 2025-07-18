@@ -1,6 +1,6 @@
 #include "Std_Include.hpp"
 
-#include "../../Utils/Hook.hpp"
+#include "../../../Utils/Hook.hpp"
 
 namespace Online
 {
@@ -19,19 +19,6 @@ namespace Online
 	BOOL Live_IsUserSignedInToDemonware(ControllerIndex controllerIndex)
 	{
 		return BD_NOT_CONNECTED;
-	}
-
-	Utils::Hook::Detour Live_IsUserSignedInToLive_Hook;
-	BOOL Live_IsUserSignedInToLive(ControllerIndex controllerIndex)
-	{
-		return BD_NOT_CONNECTED;
-	}
-
-#define XENON_STATUS_CONNECTED	5
-	Utils::Hook::Detour Live_Base_IsConnected_Hook;
-	BOOL Live_Base_IsConnected(ControllerIndex controllerIndex)
-	{
-		return XENON_STATUS_CONNECTED;
 	}
 
 	Utils::Hook::Detour LiveStorage_DoWeHaveFFOTD_Hook;
@@ -54,12 +41,6 @@ namespace Online
 
 	Utils::Hook::Detour LiveStorage_DoWeHavePlaylists_Hook;
 	bool LiveStorage_DoWeHavePlaylists()
-	{
-		return TRUE;
-	}
-
-	Utils::Hook::Detour Live_HasMultiplayerPrivileges_Hook;
-	bool Live_HasMultiplayerPrivileges(ControllerIndex controllerIndex)
 	{
 		return TRUE;
 	}
@@ -152,33 +133,26 @@ namespace Online
 	void RegisterHooks()
 	{
 		Live_IsUserSignedInToDemonware_Hook.Create(0x8259A708, Live_IsUserSignedInToDemonware);
-		Live_IsUserSignedInToLive_Hook.Create(0x8259FDF0, Live_IsUserSignedInToLive);
-		Live_Base_IsConnected_Hook.Create(0x825DE828, Live_Base_IsConnected);
 		LiveStorage_DoWeHaveFFOTD_Hook.Create(0x825DA670, LiveStorage_DoWeHaveFFOTD);
 		LiveStorage_ValidateFFOTD_Hook.Create(0x825DA6A0, LiveStorage_ValidateFFOTD);
 		LiveStorage_DoWeHaveAllStats_Hook.Create(0x825D0C40, LiveStorage_DoWeHaveAllStats);
 		LiveStorage_DoWeHavePlaylists_Hook.Create(0x825D9D20, LiveStorage_DoWeHavePlaylists);
-		Live_HasMultiplayerPrivileges_Hook.Create(0x825DF598, Live_HasMultiplayerPrivileges);
 		LiveStorage_DoWeHaveLeagues_Hook.Create(0x825D9D50, LiveStorage_DoWeHaveLeagues);
 		LiveStorage_IsTimeSynced_Hook.Create(0x825D1D58, LiveStorage_IsTimeSynced);
 		LiveStorage_DoWeHaveContracts_Hook.Create(0x825D9D30, LiveStorage_DoWeHaveContracts);
+		Utils::Hook::SetValue<uint8_t>(0x841FE109, 1); // s_geoLocationRetrieved
 		LiveElite_CheckProgress_Hook.Create(0x825A56B0, LiveElite_CheckProgress);
 		Live_IsLspCacheInited_Hook.Create(0x825E1CA8, Live_IsLspCacheInited);
 		LiveStorage_DoWeHaveStats_Hook.Create(0x825D0BE8, LiveStorage_DoWeHaveStats);
-
-		Utils::Hook::SetValue<uint8_t>(0x841FE109, 1); // s_geoLocationRetrieved
 	}
 
 	void UnregisterHooks()
 	{
 		Live_IsUserSignedInToDemonware_Hook.Clear();
-		Live_IsUserSignedInToLive_Hook.Clear();
-		Live_Base_IsConnected_Hook.Clear();
 		LiveStorage_DoWeHaveFFOTD_Hook.Clear();
 		LiveStorage_ValidateFFOTD_Hook.Clear();
 		LiveStorage_DoWeHaveAllStats_Hook.Clear();
 		LiveStorage_DoWeHavePlaylists_Hook.Clear();
-		Live_HasMultiplayerPrivileges_Hook.Clear();
 		LiveStorage_DoWeHaveLeagues_Hook.Clear();
 		LiveStorage_IsTimeSynced_Hook.Clear();
 		LiveStorage_DoWeHaveContracts_Hook.Clear();
