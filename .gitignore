@@ -23,8 +23,8 @@ Source/Builds/Emulation/Output/Bin/
 Source/Builds/Emulation/Output/Obj/
 
 # Mob of the Dead First Playable build results
-Source/Builds/Mob of the Dead First Playable/Output/Bin/
-Source/Builds/Mob of the Dead First Playable/Output/Obj/
+Source/Builds/Mob of the Dead First Playable/default_mp/Output/
+Source/Builds/Mob of the Dead First Playable/default_mp/Output/
 
 # Origins First Playable build results
 Source/Builds/Origins First Playable/Output/Bin/
