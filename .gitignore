@@ -33,8 +33,10 @@ Source/Builds/Origins First Playable/default_mp/Output/
 Source/Builds/Origins First Playable/default_mp/Output/
 
 # Origins Final build results
-Source/Builds/Origins Final/Output/Bin/
-Source/Builds/Origins Final/Output/Obj/
+Source/Builds/Origins Final/CoDMP/Output/
+Source/Builds/Origins Final/CoDMP/Output/
+Source/Builds/Origins Final/default_mp/Output/
+Source/Builds/Origins Final/default_mp/Output/
 
 # RFAZIO build results
 Source/Builds/RFAZIO/Output/Bin/
