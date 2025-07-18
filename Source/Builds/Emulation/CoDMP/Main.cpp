@@ -185,7 +185,7 @@ namespace Online
 	}
 
 	Utils::Hook::Detour LiveStats_CanPerformStatOperation_Hook;
-	int LiveStats_CanPerformStatOperation(int a1)
+	int LiveStats_CanPerformStatOperation(int Controllerindex_t)
 	{
 		return 1;
 	}
