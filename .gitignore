@@ -1,39 +1,38 @@
-
 # Greenlight build results
-Builds/Greenlight/Output/Bin/
-Builds/Greenlight/Output/Obj/
+Source/Builds/Greenlight/Output/Bin/
+Source/Builds/Greenlight/Output/Obj/
 
 # Alpha build results
-Builds/Alpha/Output/Bin/
-Builds/Alpha/Output/Obj/
+Source/Builds/Alpha/Output/Bin/
+Source/Builds/Alpha/Output/Obj/
 
 # Press build results
-Builds/Press/Output/Bin/
-Builds/Press/Output/Obj/
+Source/Builds/Press/Output/Bin/
+Source/Builds/Press/Output/Obj/
 
 # Phoenix build results
-Builds/Phoenix/Output/Bin/
-Builds/Phoenix/Output/Obj/
+Source/Builds/Phoenix/Output/Bin/
+Source/Builds/Phoenix/Output/Obj/
 
 # Emulation build results
-Builds/Emulation/Output/Bin/
-Builds/Emulation/Output/Obj/
+Source/Builds/Emulation/Output/Bin/
+Source/Builds/Emulation/Output/Obj/
 
 # Mob of the Dead First Playable build results
-Builds/Mob of the Dead First Playable/Output/Bin/
-Builds/Mob of the Dead First Playable/Output/Obj/
+Source/Builds/Mob of the Dead First Playable/Output/Bin/
+Source/Builds/Mob of the Dead First Playable/Output/Obj/
 
 # Origins First Playable build results
-Builds/Origins First Playable/Output/Bin/
-Builds/Origins First Playable/Output/Obj/
+Source/Builds/Origins First Playable/Output/Bin/
+Source/Builds/Origins First Playable/Output/Obj/
 
 # Origins Final build results
-Builds/Origins Final/Output/Bin/
-Builds/Origins Final/Output/Obj/
+Source/Builds/Origins Final/Output/Bin/
+Source/Builds/Origins Final/Output/Obj/
 
 # RFAZIO build results
-Builds/RFAZIO/Output/Bin/
-Builds/RFAZIO/Output/Obj/
+Source/Builds/RFAZIO/Output/Bin/
+Source/Builds/RFAZIO/Output/Obj/
 
 *.user
 *.sdf

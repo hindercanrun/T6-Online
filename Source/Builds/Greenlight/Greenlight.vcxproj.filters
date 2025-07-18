@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\Phoenix\Main.cpp" />
+    <ClCompile Include="..\..\Utils\Hook.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Phoenix\Std_Include.hpp" />
+    <ClInclude Include="..\..\Utils\Hook.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{0d9df007-2812-42cf-9deb-afbae074704f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
