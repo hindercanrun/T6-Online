@@ -1,46 +1,44 @@
 # Greenlight build results
 Source/Builds/Greenlight/CoDMP/Output/
-Source/Builds/Greenlight/CoDMP/Output/
+Source/Builds/Greenlight/CoDMP_PixProfile/Output/
+Source/Builds/Greenlight/CoDMP_rd/Output/
+Source/Builds/Greenlight/default_mp/Output/
+Source/Builds/Greenlight/default_mp_cheats/Output/
 
 # Alpha build results
 Source/Builds/Alpha/CoDMP/Output/
-Source/Builds/Alpha/CoDMP/Output/
-Source/Builds/Alpha/default_mp/Output/
 Source/Builds/Alpha/default_mp/Output/
 
 # Press build results
 Source/Builds/Press/CoDMP/Output/
-Source/Builds/Press/CoDMP/Output/
-Source/Builds/Press/default_mp/Output/
 Source/Builds/Press/default_mp/Output/
 
 # Phoenix build results
 Source/Builds/Phoenix/default/Output/
-Source/Builds/Phoenix/default/Output/
 
 # Emulation build results
 Source/Builds/Emulation/CoDMP/Output/
-Source/Builds/Emulation/CoDMP/Output/
-Source/Builds/Emulation/default_mp/Output/
 Source/Builds/Emulation/default_mp/Output/
 
 # Mob of the Dead First Playable build results
 Source/Builds/Mob of the Dead First Playable/default_mp/Output/
-Source/Builds/Mob of the Dead First Playable/default_mp/Output/
 
 # Origins First Playable build results
-Source/Builds/Origins First Playable/default_mp/Output/
 Source/Builds/Origins First Playable/default_mp/Output/
 
 # Origins Final build results
 Source/Builds/Origins Final/CoDMP/Output/
-Source/Builds/Origins Final/CoDMP/Output/
-Source/Builds/Origins Final/default_mp/Output/
 Source/Builds/Origins Final/default_mp/Output/
 
 # RFAZIO build results
-Source/Builds/RFAZIO/Output/Bin/
-Source/Builds/RFAZIO/Output/Obj/
+Source/Builds/RFAZIO/CoDMP/Output/
+Source/Builds/RFAZIO/CoDMP_fast/Output/
+Source/Builds/RFAZIO/CoDMP_PixProfile/Output/
+Source/Builds/RFAZIO/CoDMP_rd/Output/
+Source/Builds/RFAZIO/default_mp/Output/
+Source/Builds/RFAZIO/default_mp_cheats/Output/
+Source/Builds/RFAZIO/default_mp_script/Output/
+Source/Builds/RFAZIO/ShipScript/Output/
 
 *.user
 *.sdf

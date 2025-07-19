@@ -79,7 +79,7 @@
       <AdditionalOptions>/dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <ImageXex>
-      <ConfigurationFile>..\..\XEX.xml</ConfigurationFile>
+      <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
@@ -111,11 +111,11 @@
     </ImageXex>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Utils\Hook.cpp" />
+    <ClCompile Include="..\..\..\Utils\Hook.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Utils\Hook.hpp" />
+    <ClInclude Include="..\..\..\Utils\Hook.hpp" />
     <ClInclude Include="Std_Include.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
