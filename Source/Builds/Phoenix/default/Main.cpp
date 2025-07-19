@@ -124,6 +124,18 @@ namespace Online
 		return TRUE;
 	}
 
+	Utils::Hook::Detour LiveStorage_DoWeHaveStats_Hook;
+	bool LiveStorage_DoWeHaveStats(int a1, int a2)
+	{
+		return TRUE;
+	}
+
+	Utils::Hook::Detour LiveStorage_DoWeHaveCurrentStats_Hook;
+	bool LiveStorage_DoWeHaveCurrentStats(int a1)
+	{
+		return TRUE;
+	}
+
 	void RegisterHooks()
 	{
 		Live_IsUserSignedInToDemonware_Hook.Create(0x824DF1D8, Live_IsUserSignedInToDemonware);
@@ -137,6 +149,8 @@ namespace Online
 		Utils::Hook::SetValue<uint8_t>(0x8424C6F0, 1); // s_geoLocationRetrieved
 		LiveElite_CheckProgress_Hook.Create(0x824E78B0, LiveElite_CheckProgress);
 		LiveCAC_CheckProgress_Hook.Create(0x82352138, LiveCAC_CheckProgress);
+		LiveStorage_DoWeHaveStats_Hook.Create(0x8250C120, LiveStorage_DoWeHaveStats);
+		LiveStorage_DoWeHaveCurrentStats_Hook.Create(0x8250C150, LiveStorage_DoWeHaveCurrentStats);
 	}
 
 	void UnregisterHooks()
