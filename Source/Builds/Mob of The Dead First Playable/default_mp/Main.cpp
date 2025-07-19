@@ -124,6 +124,12 @@ namespace Online
 		return TRUE;
 	}
 
+	Utils::Hook::Detour Live_IsLSPCacheNonEmpty_Hook;
+	bool Live_IsLSPCacheNonEmpty()
+	{
+		return TRUE;
+	}
+
 	Utils::Hook::Detour LiveStorage_DoWeHaveStats_Hook;
 	bool LiveStorage_DoWeHaveStats(int a1, int a2)
 	{
@@ -143,6 +149,7 @@ namespace Online
 		Utils::Hook::SetValue<uint8_t>(0x841B14D9, 1); // s_geoLocationRetrieved
 		LiveElite_CheckProgress_Hook.Create(0x8258E9A8, LiveElite_CheckProgress);
 		Live_IsLspCacheInited_Hook.Create(0x825C8A90, Live_IsLspCacheInited);
+		Live_IsLSPCacheNonEmpty_Hook.Create(0x825C8AA8, Live_IsLSPCacheNonEmpty);
 		LiveStorage_DoWeHaveStats_Hook.Create(0x825B7130, LiveStorage_DoWeHaveStats);
 	}
 
