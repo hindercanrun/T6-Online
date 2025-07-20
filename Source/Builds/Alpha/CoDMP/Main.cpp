@@ -6,12 +6,12 @@ namespace Online
 {
 	typedef enum ControllerIndex_t
 	{
-		INVALID_CONTROLLER_PORT = -1,
+		INVALID_CONTROLLER_PORT		= -1,
 
-		CONTROLLER_INDEX_FIRST = 0,
-		CONTROLLER_INDEX_0 = 0,
+		CONTROLLER_INDEX_FIRST		= 0,
+		CONTROLLER_INDEX_0			= 0,
 
-		CONTROLLER_INDEX_COUNT = 1,
+		CONTROLLER_INDEX_COUNT		= 1,
 	} ControllerIndex;
 
 #define BD_NOT_CONNECTED	2
@@ -34,26 +34,8 @@ namespace Online
 		return XENON_STATUS_CONNECTED;
 	}
 
-	Utils::Hook::Detour LiveStorage_DoWeHaveFFOTD_Hook;
-	bool LiveStorage_DoWeHaveFFOTD()
-	{
-		return TRUE;
-	}
-
-	Utils::Hook::Detour LiveStorage_ValidateFFOTD_Hook;
-	bool LiveStorage_ValidateFFOTD()
-	{
-		return TRUE;
-	}
-
 	Utils::Hook::Detour LiveStorage_DoWeHaveAllStats_Hook;
 	bool LiveStorage_DoWeHaveAllStats(ControllerIndex controllerIndex)
-	{
-		return TRUE;
-	}
-
-	Utils::Hook::Detour LiveStorage_DoWeHavePlaylists_Hook;
-	bool LiveStorage_DoWeHavePlaylists()
 	{
 		return TRUE;
 	}
@@ -159,12 +141,11 @@ namespace Online
 		LiveStorage_DoWeHaveLeagues_Hook.Create(0x827AB938, LiveStorage_DoWeHaveLeagues);
 		LiveStorage_IsTimeSynced_Hook.Create(0x827A2810, LiveStorage_IsTimeSynced);
 		LiveStorage_DoWeHaveContracts_Hook.Create(0x827AB918, LiveStorage_DoWeHaveContracts);
+		Utils::Hook::SetValue<uint8_t>(0x849016D4, 1); // s_geoLocationRetrieved
 		LiveElite_CheckProgress_Hook.Create(0x8276FD78, LiveElite_CheckProgress);
 		LiveCAC_CheckProgress_Hook.Create(0x824E1888, LiveCAC_CheckProgress);
 		SanityCheckSession_Hook.Create(0x82787E90, SanityCheckSession);
 		LiveStats_CanPerformStatOperation_Hook.Create(0x8278EDB8 , LiveStats_CanPerformStatOperation);
-
-		Utils::Hook::SetValue<uint8_t>(0x849016D4, 1); // s_geoLocationRetrieved
 	}
 
 	void UnregisterHooks()
