@@ -154,10 +154,7 @@ namespace Online
 		Live_IsUserSignedInToDemonware_Hook.Create(0x82763C10, Live_IsUserSignedInToDemonware);
 		Live_IsUserSignedInToLive_Hook.Create(0x82767FA0, Live_IsUserSignedInToLive);
 		Live_Base_IsConnected_Hook.Create(0x827B5500, Live_Base_IsConnected);
-		LiveStorage_DoWeHaveFFOTD_Hook.Create(0x827AC630, LiveStorage_DoWeHaveFFOTD);
-		LiveStorage_ValidateFFOTD_Hook.Create(0x827AC720, LiveStorage_ValidateFFOTD);
 		LiveStorage_DoWeHaveAllStats_Hook.Create(0x827A0A10, LiveStorage_DoWeHaveAllStats);
-		LiveStorage_DoWeHavePlaylists_Hook.Create(0x827AB908, LiveStorage_DoWeHavePlaylists);
 		Live_HasMultiplayerPrivileges_Hook.Create(0x82342690, Live_HasMultiplayerPrivileges);
 		LiveStorage_DoWeHaveLeagues_Hook.Create(0x827AB938, LiveStorage_DoWeHaveLeagues);
 		LiveStorage_IsTimeSynced_Hook.Create(0x827A2810, LiveStorage_IsTimeSynced);
@@ -175,10 +172,7 @@ namespace Online
 		Live_IsUserSignedInToDemonware_Hook.Clear();
 		Live_IsUserSignedInToLive_Hook.Clear();
 		Live_Base_IsConnected_Hook.Clear();
-		LiveStorage_DoWeHaveFFOTD_Hook.Clear();
-		LiveStorage_ValidateFFOTD_Hook.Clear();
 		LiveStorage_DoWeHaveAllStats_Hook.Clear();
-		LiveStorage_DoWeHavePlaylists_Hook.Clear();
 		Live_HasMultiplayerPrivileges_Hook.Clear();
 		LiveStorage_DoWeHaveLeagues_Hook.Clear();
 		LiveStorage_IsTimeSynced_Hook.Clear();
