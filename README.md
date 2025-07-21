@@ -26,12 +26,6 @@
 - [x] CoDMP
 - [x] default_mp
 
-#### ZBUILD:
-- Won't be done, not for awhile.
-
-#### ZombiesCma:
-- Won't be done, not for awhile.
-
 #### Mob of the Dead First Playable:
 - [x] default_mp
 
