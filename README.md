@@ -64,7 +64,7 @@
 ## Building From Source
 1. Clone the Git repository or download as .ZIP and extract it to your desired location.
 2. Make your way into the `Source` folder.
-3. Open up `T6.sln` in **Visual Studio 2010**.
+3. Open up `T6-Online.sln` in **Visual Studio 2010**.
 4. Build the solution in either `Debug` or `Release`, both work.
 5. Done.
 
