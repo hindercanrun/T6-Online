@@ -121,8 +121,7 @@
       <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy /Y "$(ProjectDir)plugins.toml" "$(ProjectDir)Output\Bin\Release\plugins.toml"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
