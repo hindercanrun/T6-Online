@@ -7,7 +7,7 @@
 #### Greenlight:
 - [x] CoDMP
 - [x] CoDMP_PixProfile
-- [ ] CoDMP_rd
+- [x] CoDMP_rd
 - [x] default_mp
 - [ ] default_mp_cheats
 
@@ -17,7 +17,7 @@
 
 #### Press:
 - [x] CoDMP
-- [ ] default_mp
+- [x] default_mp
 
 #### Phoenix:
 - [x] default
@@ -25,12 +25,6 @@
 #### Emulation:
 - [x] CoDMP
 - [x] default_mp
-
-#### ZBUILD:
-- [ ] CoDMP_rd
-
-#### ZombiesCma:
-- [ ] CoDMP_rd
 
 #### Mob of the Dead First Playable:
 - [x] default_mp
