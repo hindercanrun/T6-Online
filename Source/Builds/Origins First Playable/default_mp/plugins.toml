@@ -1,0 +1,7 @@
+title_id = "415608C3"
+
+[[plugin]]
+	name = "Origins First Playable"
+	file = "Origins First Playable.xex"
+	hash = "E8C4D8DE8034E862"
+	is_enabled = true

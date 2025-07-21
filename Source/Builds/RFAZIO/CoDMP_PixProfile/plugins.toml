@@ -1,0 +1,7 @@
+title_id = "415608C3"
+
+[[plugin]]
+	name = "RFAZIO"
+	file = "RFAZIO.xex"
+	hash = "F9AD22E593E14F55"
+	is_enabled = true

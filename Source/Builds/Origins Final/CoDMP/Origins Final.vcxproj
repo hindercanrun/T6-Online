@@ -81,6 +81,9 @@
     <ImageXex>
       <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
+    <PreBuildEvent>
+      <Command>copy /Y "$(ProjectDir)plugins.toml" "$(ProjectDir)Output\Bin\Release\plugins.toml"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
     <ClCompile>
@@ -109,6 +112,9 @@
     <ImageXex>
       <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
+    <PreBuildEvent>
+      <Command>copy /Y "$(ProjectDir)plugins.toml" "$(ProjectDir)Output\Bin\Release\plugins.toml"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Utils\Hook.cpp" />

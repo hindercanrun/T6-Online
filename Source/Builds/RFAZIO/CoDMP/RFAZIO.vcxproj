@@ -109,6 +109,9 @@
     <ImageXex>
       <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
+    <PreBuildEvent>
+      <Command>copy /Y "$(ProjectDir)plugins.toml" "$(ProjectDir)Output\Bin\Release\plugins.toml"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\Utils\Hook.cpp" />

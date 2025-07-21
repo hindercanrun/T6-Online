@@ -1,0 +1,7 @@
+title_id = "415608C3"
+
+[[plugin]]
+	name = "Alpha"
+	file = "Alpha.xex"
+	hash = "0CB2A0C60096D201"
+	is_enabled = true

@@ -1,0 +1,7 @@
+title_id = "415608C3"
+
+[[plugin]]
+	name = "Origins Final"
+	file = "Origins Final.xex"
+	hash = "7FCD8FD3DE41D96E"
+	is_enabled = true

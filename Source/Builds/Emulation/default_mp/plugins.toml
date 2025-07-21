@@ -1,0 +1,7 @@
+title_id = "415608C3"
+
+[[plugin]]
+	name = "Emulation"
+	file = "Emulation.xex"
+	hash = "A90FED6E2058D4BB"
+	is_enabled = true

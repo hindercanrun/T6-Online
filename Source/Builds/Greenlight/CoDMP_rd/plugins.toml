@@ -1,0 +1,7 @@
+title_id = "415608C3"
+
+[[plugin]]
+	name = "Greenlight"
+	file = "Greenlight.xex"
+	hash = "A653E98D692860FC"
+	is_enabled = true

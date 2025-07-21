@@ -1,0 +1,7 @@
+title_id = "415608C3"
+
+[[plugin]]
+	name = "Mob of The Dead First Playable"
+	file = "Mob of The Dead First Playable.xex"
+	hash = "EB81E92CD9C31CDF"
+	is_enabled = true
