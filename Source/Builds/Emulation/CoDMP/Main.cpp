@@ -69,26 +69,8 @@ namespace Online
 		return XENON_STATUS_CONNECTED;
 	}
 
-	Utils::Hook::Detour LiveStorage_DoWeHaveFFOTD_Hook;
-	bool LiveStorage_DoWeHaveFFOTD()
-	{
-		return TRUE;
-	}
-
-	Utils::Hook::Detour LiveStorage_ValidateFFOTD_Hook;
-	bool LiveStorage_ValidateFFOTD()
-	{
-		return TRUE;
-	}
-
 	Utils::Hook::Detour LiveStorage_DoWeHaveAllStats_Hook;
 	bool LiveStorage_DoWeHaveAllStats(ControllerIndex controllerIndex)
-	{
-		return TRUE;
-	}
-
-	Utils::Hook::Detour LiveStorage_DoWeHavePlaylists_Hook;
-	bool LiveStorage_DoWeHavePlaylists()
 	{
 		return TRUE;
 	}
@@ -185,9 +167,9 @@ namespace Online
 	}
 
 	Utils::Hook::Detour LiveStats_CanPerformStatOperation_Hook;
-	int LiveStats_CanPerformStatOperation(int Controllerindex_t)
+	bool LiveStats_CanPerformStatOperation(ControllerIndex Controllerindex)
 	{
-		return 1;
+		return TRUE;
 	}
 
 	void RegisterHooks()
@@ -196,10 +178,7 @@ namespace Online
 		Live_IsUserSignedInToDemonware_Hook.Create(0x827AC038, Live_IsUserSignedInToDemonware);
 		Live_IsUserSignedInToLive_Hook.Create(0x827B0A08, Live_IsUserSignedInToLive);
 		Live_Base_IsConnected_Hook.Create(0x827FA9E0, Live_Base_IsConnected);
-		LiveStorage_DoWeHaveFFOTD_Hook.Create(0x827F4EF8, LiveStorage_DoWeHaveFFOTD);
-		LiveStorage_ValidateFFOTD_Hook.Create(0x827F4FE8, LiveStorage_ValidateFFOTD);
 		LiveStorage_DoWeHaveAllStats_Hook.Create(0x827EAF10, LiveStorage_DoWeHaveAllStats);
-		LiveStorage_DoWeHavePlaylists_Hook.Create(0x827F4458, LiveStorage_DoWeHavePlaylists);
 		Live_HasMultiplayerPrivileges_Hook.Create(0x827FBCA0, Live_HasMultiplayerPrivileges);
 		LiveStorage_DoWeHaveLeagues_Hook.Create(0x827F4488, LiveStorage_DoWeHaveLeagues);
 		LiveStorage_IsTimeSynced_Hook.Create(0x827ECBD0, LiveStorage_IsTimeSynced);
