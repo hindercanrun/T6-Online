@@ -1,0 +1,35 @@
+title_name = "New Moon"
+title_id = "415608C3"
+hash = "A653E98D692860FC" # CoDMP_rd.exe
+
+[[patch]]
+	name = "xenia patches"
+	author = "hindercanrun"
+	is_enabled = true
+
+	# fix booting
+	[[patch.be32]]
+		address = 0x8267A3F0
+		value = 0x60000000
+
+[[patch]]
+	name = "patches"
+	author = "hindercanrun"
+	is_enabled = true
+
+	# nested task asserts
+	[[patch.be32]]
+		address = 0x82A55120
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x82A272C8
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x82793CE4
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x827938B4
+		value = 0x60000000
