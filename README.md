@@ -17,7 +17,7 @@
 
 #### Press:
 - [x] CoDMP
-- [ ] default_mp
+- [x] default_mp
 
 #### Phoenix:
 - [x] default
