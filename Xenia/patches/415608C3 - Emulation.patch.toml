@@ -13,11 +13,11 @@ hash = "4B54ED67E14D0F24" # CoDMP.exe
 		value = 0x60000000
 
 [[patch]]
-	name = "kys"
+	name = "patches"
 	author = "hindercanrun"
 	is_enabled = true
 
-	# stupid spamming stream starving print JUST EAT RETARD
+	# spamming stream starving print
 	[[patch.be32]]
 		address = 0x82793160
 		value = 0x60000000
@@ -38,9 +38,9 @@ hash = "4B54ED67E14D0F24" # CoDMP.exe
 		value = 0x60000000
 
 	# live_readPublisherStorageLocally
-	[[patch.be8]]
+	[[patch.be32]]
 		address = 0x827F29FC
-		value = 0x1
+		value = 0x38800001
 
 	# nested task assert
 	[[patch.be32]]
@@ -48,5 +48,13 @@ hash = "4B54ED67E14D0F24" # CoDMP.exe
 		value = 0x60000000
 
 	[[patch.be32]]
+		address = 0x827EC73C
+		value = 0x60000000
+
+	[[patch.be32]]
 		address = 0x827B09A0
+		value = 0x60000000
+
+	[[patch.be32]]
+		address = 0x8295B204
 		value = 0x60000000
