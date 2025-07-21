@@ -198,10 +198,7 @@ namespace Online
 		Live_IsUserSignedInToDemonware_Hook.Clear();
 		Live_IsUserSignedInToLive_Hook.Clear();
 		Live_Base_IsConnected_Hook.Clear();
-		LiveStorage_DoWeHaveFFOTD_Hook.Clear();
-		LiveStorage_ValidateFFOTD_Hook.Clear();
 		LiveStorage_DoWeHaveAllStats_Hook.Clear();
-		LiveStorage_DoWeHavePlaylists_Hook.Clear();
 		Live_HasMultiplayerPrivileges_Hook.Clear();
 		LiveStorage_DoWeHaveLeagues_Hook.Clear();
 		LiveStorage_IsTimeSynced_Hook.Clear();
