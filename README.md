@@ -7,7 +7,7 @@
 #### Greenlight:
 - [x] CoDMP
 - [x] CoDMP_PixProfile
-- [ ] CoDMP_rd
+- [x] CoDMP_rd
 - [x] default_mp
 - [ ] default_mp_cheats
 
