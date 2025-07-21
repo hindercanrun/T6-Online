@@ -27,10 +27,10 @@
 - [x] default_mp
 
 #### ZBUILD:
-- [ ] CoDMP_rd
+- Won't be done, not for awhile.
 
 #### ZombiesCma:
-- [ ] CoDMP_rd
+- Won't be done, not for awhile.
 
 #### Mob of the Dead First Playable:
 - [x] default_mp
