@@ -1,34 +1,47 @@
 # Proof-of-Concept plugin to allow access to online menus in Treyarch's T6 development builds
 
 ## Supported Builds:
+> [!IMPORTANT]
+> If a build or executable is missing from this list, it's broken/unplayable.
+
 #### Greenlight:
 - [x] CoDMP
 - [ ] CoDMP_PixProfile
 - [ ] CoDMP_rd
 - [x] default_mp
 - [ ] default_mp_cheats
+
 #### Alpha:
 - [x] CoDMP
 - [x] default_mp
+
 #### Press:
 - [x] CoDMP
 - [ ] default_mp
+
 #### Phoenix:
 - [x] default
+
 #### Emulation:
 - [x] CoDMP
 - [x] default_mp
+
 #### ZBUILD:
 - [ ] CoDMP_rd
+
 #### ZombiesCma:
 - [ ] CoDMP_rd
+
 #### Mob of the Dead First Playable:
 - [x] default_mp
+
 #### Origins First Playable:
 - [x] default_mp
+
 #### Origins Final:
 - [x] CoDMP
 - [x] default_mp
+
 #### RFAZIO:
 - [x] CoDMP
 - [ ] CoDMP_fast
@@ -38,6 +51,8 @@
 - [ ] default_mp_cheats
 - [ ] default_mp_script
 - [ ] ShipScript
+
+---
 
 ## Road map:
 - [x] Access to online menus
