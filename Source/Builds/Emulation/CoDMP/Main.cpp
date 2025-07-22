@@ -16,10 +16,6 @@ namespace Online
 		}
 		return ERROR_SUCCESS;
 	}
-#elif
-	// In case Xbox needs some things patched
-
-#endif
 
 	typedef struct _XPARTY_CUSTOM_DATA
 	{
@@ -27,7 +23,6 @@ namespace Online
 		ULONGLONG			qwSecond;
 	} XPARTY_CUSTOM_DATA;
 
-#define XPARTY_MAX_USERS	8
 	typedef struct _XPARTY_USER_INFO
 	{
 		XUID				Xuid;
@@ -40,6 +35,7 @@ namespace Online
 		XPARTY_CUSTOM_DATA	CustomData;
 	} XPARTY_USER_INFO;
 
+#define XPARTY_MAX_USERS	8
 	typedef struct _XPARTY_USER_LIST
 	{
 		DWORD dwUserCount;
@@ -55,15 +51,19 @@ namespace Online
 		}
 		return S_OK;
 	}
+#elif
+	// In case Xbox needs some things patched
+
+#endif
 
 	typedef enum ControllerIndex_t
 	{
-		INVALID_CONTROLLER_PORT = -1,
+		INVALID_CONTROLLER_PORT		= -1,
 
-		CONTROLLER_INDEX_FIRST = 0,
-		CONTROLLER_INDEX_0 = 0,
+		CONTROLLER_INDEX_FIRST		= 0,
+		CONTROLLER_INDEX_0			= 0,
 
-		CONTROLLER_INDEX_COUNT = 1,
+		CONTROLLER_INDEX_COUNT		= 1,
 	} ControllerIndex;
 
 #define BD_NOT_CONNECTED	2
@@ -191,11 +191,10 @@ namespace Online
 
 	void RegisterHooks()
 	{
-
 #if IS_XENIA
 		XUserCheckPrivilege_Hook.Create(0x829F2550, XUserCheckPrivilege);
-#endif
 		XPartyGetUserList_Hook.Create(0x829F0608, XPartyGetUserList);
+#endif
 		Live_IsUserSignedInToDemonware_Hook.Create(0x827AC038, Live_IsUserSignedInToDemonware);
 		Live_IsUserSignedInToLive_Hook.Create(0x827B0A08, Live_IsUserSignedInToLive);
 		Live_Base_IsConnected_Hook.Create(0x827FA9E0, Live_Base_IsConnected);
@@ -204,21 +203,20 @@ namespace Online
 		LiveStorage_DoWeHaveLeagues_Hook.Create(0x827F4488, LiveStorage_DoWeHaveLeagues);
 		LiveStorage_IsTimeSynced_Hook.Create(0x827ECBD0, LiveStorage_IsTimeSynced);
 		LiveStorage_DoWeHaveContracts_Hook.Create(0x827F4468, LiveStorage_DoWeHaveContracts);
+		Utils::Hook::SetValue<uint8_t>(0x8469B230, 1); // s_geoLocationRetrieved
 		LiveElite_CheckProgress_Hook.Create(0x827B9B60, LiveElite_CheckProgress);
 		LiveCAC_CheckProgress_Hook.Create(0x8250E8F0, LiveCAC_CheckProgress);
 		Live_IsLspCacheInited_Hook.Create(0x827FF3A8, Live_IsLspCacheInited);
 		SanityCheckSession_Hook.Create(0x827D3CA0, SanityCheckSession);
 		LiveStats_CanPerformStatOperation_Hook.Create(0x827D9AC8, LiveStats_CanPerformStatOperation);
-
-		Utils::Hook::SetValue<uint8_t>(0x8469B230, 1); // s_geoLocationRetrieved
 	}
 
 	void UnregisterHooks()
 	{
 #if IS_XENIA
 		XUserCheckPrivilege_Hook.Clear();
-#endif
 		XPartyGetUserList_Hook.Clear();
+#endif
 		Live_IsUserSignedInToDemonware_Hook.Clear();
 		Live_IsUserSignedInToLive_Hook.Clear();
 		Live_Base_IsConnected_Hook.Clear();
