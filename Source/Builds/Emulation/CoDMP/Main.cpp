@@ -2,9 +2,152 @@
 
 #include "../../../Utils/Hook.hpp"
 
+#include <stdio.h>
+
 namespace Online
 {
+	typedef void (*Com_Printf_t)(int channel, const char* fmt, ...);
+	Com_Printf_t Com_Printf = Com_Printf_t(0x825644E0);
+
+	typedef enum _bdLogMessageType
+	{
+		BD_LOG_INFO = 0,
+		BD_LOG_WARNING = 1,
+		BD_LOG_ERROR = 2,
+	} bdLogMessageType;
+
+	Utils::Hook::Detour bdLogMessage_Hook;
+	void bdLogMessage(
+		bdLogMessageType type,
+		const char* baseChannel,
+		const char* channel,
+		const char* file,
+		const char* function,
+		int line,
+		const char* format,
+		...)
+	{
+		Com_Printf(0, "\n");
+		Com_Printf(0, "DW: file: %s\n", file);
+		Com_Printf(0, "DW: function: %s\n", function);
+		Com_Printf(0, "DW: line: %d\n", line);
+		Com_Printf(0, "DW: channel: %s : %s\n", channel, baseChannel);
+
+		char buffer[1024];
+
+		va_list args;
+		va_start(args, format);
+		vsnprintf(buffer, sizeof(buffer), format, args);
+		va_end(args);
+
+		Com_Printf(0, "DW: message: %s\n", buffer);
+	}
+
+	Utils::Hook::Detour bdLobbyService__getStatus_Hook;
+	int __fastcall bdLobbyService__getStatus(int a1)
+	{
+		// If there's a connection object at +0xA0, report BD_CONNECTED
+		if (*(int*)(a1 + 160))
+			return 2; // BD_CONNECTED
+
+		return 0; // BD_NOT_CONNECTED
+	}
+
 #if IS_XENIA
+
+	#pragma pack(push, 1)
+	struct FakeLSPEntry
+	{
+		DWORD ipOrId;
+		char name[200];
+		char unused[4];
+	};
+	#pragma pack(pop)
+
+	Utils::Hook::Detour XEnumerate_Hook;
+	DWORD XEnumerate(HANDLE hEnum, PVOID pvBuffer, DWORD cbBuffer, PDWORD pcItemsReturned, PXOVERLAPPED pOverlapped)
+	{
+		if (pvBuffer && cbBuffer >= sizeof(FakeLSPEntry))
+		{
+			FakeLSPEntry* entry = (FakeLSPEntry*)pvBuffer;
+
+			entry->ipOrId = inet_addr("185.34.106.11");
+			strcpy_s(entry->name, sizeof(entry->name), "OPS2OPS2 - DW ATVI LSP");
+
+			if (pcItemsReturned)
+			{
+				*pcItemsReturned = 1;
+			}
+		}
+		else if (pcItemsReturned)
+		{
+			*pcItemsReturned = 0;
+		}
+
+		if (pOverlapped)
+		{
+			pOverlapped->InternalLow = ERROR_NO_MORE_FILES;
+			pOverlapped->InternalHigh = 1;
+
+			// signal the async completion event
+			if (pOverlapped->hEvent)
+			{
+				SetEvent(pOverlapped->hEvent);
+			}
+			return ERROR_IO_PENDING;
+		}
+		return ERROR_NO_MORE_FILES;
+	}
+
+	Utils::Hook::Detour XGetOverlappedResult_Hook;
+	DWORD XGetOverlappedResult(PXOVERLAPPED pOverlapped, LPDWORD pdwResult, BOOL bWait)
+	{
+		if (!pOverlapped)
+		{
+			return FALSE;
+		}
+
+		if (pdwResult)
+		{
+			*pdwResult = static_cast<DWORD>(pOverlapped->InternalHigh);
+		}
+
+		DWORD res = static_cast<DWORD>(pOverlapped->InternalLow);
+		if (res == ERROR_IO_INCOMPLETE)
+		{
+			if (bWait)
+			{
+				pOverlapped->InternalLow = ERROR_SUCCESS;
+				pOverlapped->InternalHigh = 1;
+
+				if (pdwResult)
+				{
+					*pdwResult = 1;
+				}
+				return TRUE;
+			}
+
+			SetLastError(ERROR_IO_INCOMPLETE);
+			return FALSE;
+		}
+
+		if (res != ERROR_SUCCESS)
+		{
+			SetLastError(res);
+		}
+		return (res == ERROR_SUCCESS);
+	}
+
+	Utils::Hook::Detour XNetServerToInAddr_Hook;
+	INT XNetServerToInAddr(const IN_ADDR ina, DWORD dwServiceId, IN_ADDR *pina)
+	{
+		if (pina)
+		{
+			*(unsigned int *)pina = 0xC0A80001; // 192.168.0.1
+		}
+		return ERROR_SUCCESS;
+	}
+
 	Utils::Hook::Detour XUserCheckPrivilege_Hook;
 	DWORD XUserCheckPrivilege(DWORD userIndex, DWORD privilege, PBOOL result)
 	{
@@ -191,10 +334,17 @@ namespace Online
 
 	void RegisterHooks()
 	{
+		//bdLogMessage_Hook.Create(0x82AC2A88, bdLogMessage);
+		//bdLobbyService__getStatus_Hook.Create(0x82AA1A38, bdLobbyService__getStatus);
+
 #if IS_XENIA
-		XUserCheckPrivilege_Hook.Create(0x829F2550, XUserCheckPrivilege);
-		XPartyGetUserList_Hook.Create(0x829F0608, XPartyGetUserList);
+		//XEnumerate_Hook.Create(0x829F3440, XEnumerate);
+		//XGetOverlappedResult_Hook.Create(0x829F33A0, XGetOverlappedResult);
+		//XNetServerToInAddr_Hook.Create(0x82A081C0, XNetServerToInAddr);
+		//XUserCheckPrivilege_Hook.Create(0x829F2550, XUserCheckPrivilege);
+		//XPartyGetUserList_Hook.Create(0x829F0608, XPartyGetUserList);
 #endif
+
 		Live_IsUserSignedInToDemonware_Hook.Create(0x827AC038, Live_IsUserSignedInToDemonware);
 		Live_IsUserSignedInToLive_Hook.Create(0x827B0A08, Live_IsUserSignedInToLive);
 		Live_Base_IsConnected_Hook.Create(0x827FA9E0, Live_Base_IsConnected);
