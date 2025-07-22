@@ -110,7 +110,7 @@
       <ConfigurationFile>..\..\..\XEX.xml</ConfigurationFile>
     </ImageXex>
     <PreBuildEvent>
-      <Command>copy /Y "$(ProjectDir)plugins.toml" "$(ProjectDir)Output\Bin\Release\plugins.toml"</Command>
+      <Command>copy /Y "$(ProjectDir)plugins.toml" "$(ProjectDir)Output\Bin\Debug\plugins.toml"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
