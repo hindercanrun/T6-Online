@@ -41,10 +41,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoDMP", "CoDMP", "{E87F9C2B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "default_mp", "default_mp", "{63DEB354-087B-483A-B733-727EE32AACAD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alpha", "Builds\Alpha\CoDMP\CoDMP.vcxproj", "{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alpha", "Builds\Alpha\default_mp\default_mp.vcxproj", "{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Press", "Builds\Press\CoDMP\Press.vcxproj", "{460CF8C5-D794-459A-9DB6-2DEEB38CDFED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "default_mp", "default_mp", "{81981B12-C1ED-4417-AE2F-2BBCAAAC7C18}"
@@ -101,24 +97,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Greenlight", "Builds\Greenl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Greenlight", "Builds\Greenlight\CoDMP_rd\Greenlight.vcxproj", "{29B05BE6-3E76-4AA5-9BCF-AA9C7A09C66D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alpha", "Builds\Alpha\CoDMP\Alpha.vcxproj", "{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alpha", "Builds\Alpha\default_mp\Alpha.vcxproj", "{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Xbox 360 = Debug|Xbox 360
 		Release|Xbox 360 = Release|Xbox 360
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
-		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
-		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
-		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
-		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Release|Xbox 360.Build.0 = Release|Xbox 360
-		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
-		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
-		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
-		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
-		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
-		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Release|Xbox 360.Build.0 = Release|Xbox 360
-		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
 		{460CF8C5-D794-459A-9DB6-2DEEB38CDFED}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
 		{460CF8C5-D794-459A-9DB6-2DEEB38CDFED}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
 		{460CF8C5-D794-459A-9DB6-2DEEB38CDFED}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
@@ -203,6 +191,18 @@ Global
 		{29B05BE6-3E76-4AA5-9BCF-AA9C7A09C66D}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
 		{29B05BE6-3E76-4AA5-9BCF-AA9C7A09C66D}.Release|Xbox 360.Build.0 = Release|Xbox 360
 		{29B05BE6-3E76-4AA5-9BCF-AA9C7A09C66D}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
+		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{A1C082FB-F9B2-4073-9F49-A68B3B27BE15}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
+		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{BCCA6DF6-C359-49BB-B2C2-17B4D009DFCE}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
