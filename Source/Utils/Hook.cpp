@@ -3,6 +3,7 @@
 #ifndef IS_XENIA
 #define IS_XENIA TRUE // Temp value for now.
 #endif
+
 // We must do this to make hooks work on Xenia.
 #if IS_XENIA
 #pragma section(".text")
