@@ -4,6 +4,23 @@
 
 namespace Online
 {
+#if IS_XENIA
+	Utils::Hook::Detour XUserCheckPrivilege_Hook;
+	DWORD XUserCheckPrivilege(DWORD userIndex, DWORD privilege, PBOOL result)
+	{
+		// stubbed to always return success when checking for privileges
+
+		if (result)
+		{
+			*result = TRUE;
+		}
+		return ERROR_SUCCESS;
+	}
+#elif
+	// In case Xbox needs some things patched
+
+#endif
+
 	typedef struct _XPARTY_CUSTOM_DATA
 	{
 		ULONGLONG			qwFirst;
@@ -174,6 +191,10 @@ namespace Online
 
 	void RegisterHooks()
 	{
+
+#if IS_XENIA
+		XUserCheckPrivilege_Hook.Create(0x829F2550, XUserCheckPrivilege);
+#endif
 		XPartyGetUserList_Hook.Create(0x829F0608, XPartyGetUserList);
 		Live_IsUserSignedInToDemonware_Hook.Create(0x827AC038, Live_IsUserSignedInToDemonware);
 		Live_IsUserSignedInToLive_Hook.Create(0x827B0A08, Live_IsUserSignedInToLive);
@@ -194,6 +215,9 @@ namespace Online
 
 	void UnregisterHooks()
 	{
+#if IS_XENIA
+		XUserCheckPrivilege_Hook.Clear();
+#endif
 		XPartyGetUserList_Hook.Clear();
 		Live_IsUserSignedInToDemonware_Hook.Clear();
 		Live_IsUserSignedInToLive_Hook.Clear();
