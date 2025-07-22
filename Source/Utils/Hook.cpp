@@ -1,8 +1,14 @@
 #include "Hook.hpp"
 
+#ifndef IS_XENIA
+#define IS_XENIA TRUE // Temp value for now.
+#endif
+// We must do this to make hooks work on Xenia.
+#if IS_XENIA
 #pragma section(".text")
 __declspec(allocate(".text")) BYTE Utils::Hook::Detour::trampolineBuffer[200 * 20];
 SIZE_T Utils::Hook::Detour::trampolineSize = 0;
+#endif
 
 namespace Utils
 {
@@ -31,7 +37,7 @@ namespace Utils
 			, originalLength_(0)
 			, trampolineAddress(NULL)
 		{
-			Create(reinterpret_cast<void*>(place), target);
+			Create((void*)(place), target);
 		}
 
 		Detour::~Detour()
@@ -70,7 +76,7 @@ namespace Utils
 
 		bool Detour::Create(size_t place, void* target)
 		{
-			return Create(reinterpret_cast<void*>(place), target);
+			return Create((void*)(place), target);
 		}
 
 		bool Detour::Clear()
