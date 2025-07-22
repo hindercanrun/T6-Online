@@ -24,7 +24,7 @@ namespace Online
 		const char* file,
 		const char* function,
 		int line,
-		const char* format,
+		const char* fmt,
 		...)
 	{
 		Com_Printf(0, "\n");
@@ -36,8 +36,8 @@ namespace Online
 		char buffer[1024];
 
 		va_list args;
-		va_start(args, format);
-		vsnprintf(buffer, sizeof(buffer), format, args);
+		va_start(args, fmt);
+		vsnprintf(buffer, sizeof(buffer), fmt, args);
 		va_end(args);
 
 		Com_Printf(0, "DW: message: %s\n", buffer);
