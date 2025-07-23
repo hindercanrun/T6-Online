@@ -22,7 +22,7 @@ namespace Online
 	Utils::Hook::Detour BB_Print_Hook;
 	void BB_Print(ControllerIndex_t controllerIndex, const char* name, char* fmt, ...)
 	{
-		Com_Printf(0, "BB: controllerIndex: %i\n", controllerIndex);
+		Com_Printf(0, "BB: controllerIndex: %d\n", controllerIndex);
 		Com_Printf(0, "BB: name: %s\n", name);
 
 		char buffer[1024];
