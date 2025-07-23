@@ -9,6 +9,32 @@ namespace Online
 	typedef void (*Com_Printf_t)(int channel, const char* fmt, ...);
 	Com_Printf_t Com_Printf = Com_Printf_t(0x825644E0);
 
+	typedef enum ControllerIndex_t
+	{
+		INVALID_CONTROLLER_PORT		= -1,
+
+		CONTROLLER_INDEX_FIRST		= 0,
+		CONTROLLER_INDEX_0			= 0,
+
+		CONTROLLER_INDEX_COUNT		= 1,
+	} ControllerIndex;
+
+	Utils::Hook::Detour BB_Print_Hook;
+	void BB_Print(ControllerIndex_t controllerIndex, const char* name, char* fmt, ...)
+	{
+		Com_Printf(0, "BB: controllerIndex: %i\n", controllerIndex);
+		Com_Printf(0, "BB: name: %s\n", name);
+
+		char buffer[1024];
+
+		va_list args;
+		va_start(args, fmt);
+		vsnprintf(buffer, sizeof(buffer), fmt, args);
+		va_end(args);
+
+		Com_Printf(0, "BB: message: %s\n", buffer);
+	}
+
 	typedef enum _bdLogMessageType
 	{
 		BD_LOG_INFO = 0,
@@ -199,16 +225,6 @@ namespace Online
 
 #endif
 
-	typedef enum ControllerIndex_t
-	{
-		INVALID_CONTROLLER_PORT		= -1,
-
-		CONTROLLER_INDEX_FIRST		= 0,
-		CONTROLLER_INDEX_0			= 0,
-
-		CONTROLLER_INDEX_COUNT		= 1,
-	} ControllerIndex;
-
 #define BD_NOT_CONNECTED	2
 	Utils::Hook::Detour Live_IsUserSignedInToDemonware_Hook;
 	BOOL Live_IsUserSignedInToDemonware(ControllerIndex controllerIndex)
@@ -334,6 +350,7 @@ namespace Online
 
 	void RegisterHooks()
 	{
+		BB_Print_Hook.Create(0x825F7548, BB_Print);
 		//bdLogMessage_Hook.Create(0x82AC2A88, bdLogMessage);
 		//bdLobbyService__getStatus_Hook.Create(0x82AA1A38, bdLobbyService__getStatus);
 
