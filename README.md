@@ -37,7 +37,7 @@
 - [x] default_mp
 
 #### RFAZIO:
-- [x] CoDMP
+- [ ] CoDMP
 - [ ] CoDMP_fast
 - [ ] CoDMP_PixProfile
 - [ ] CoDMP_rd
@@ -45,6 +45,9 @@
 - [ ] default_mp_cheats
 - [ ] default_mp_script
 - [ ] ShipScript
+
+#### Retail
+- [x] default_mp
 
 ---
 
