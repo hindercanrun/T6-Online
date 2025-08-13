@@ -37,7 +37,7 @@
 - [x] default_mp
 
 #### RFAZIO:
-- [x] CoDMP
+- [ ] CoDMP
 - [ ] CoDMP_fast
 - [ ] CoDMP_PixProfile
 - [ ] CoDMP_rd
