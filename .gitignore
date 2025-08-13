@@ -40,6 +40,9 @@ Source/Builds/RFAZIO/default_mp_cheats/Output/
 Source/Builds/RFAZIO/default_mp_script/Output/
 Source/Builds/RFAZIO/ShipScript/Output/
 
+# Retail build results
+Source/Builds/Retail/default_mp/Output/
+
 *.user
 *.sdf
 *.suo
