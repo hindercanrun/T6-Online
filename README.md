@@ -46,6 +46,9 @@
 - [ ] default_mp_script
 - [ ] ShipScript
 
+#### Retail
+- [x] default_mp
+
 ---
 
 ## Road map:
